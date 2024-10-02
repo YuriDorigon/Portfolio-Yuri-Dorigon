@@ -1,26 +1,61 @@
-# Challenge ONE | Front End - Portfólio
----
+# Portfólio de Yuri Dorigon
 
-<p align="center" >
-     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/101413385/168887837-b6d26532-6782-48dc-92eb-e48bf6c57a15.png">
-</p>
+Bem-vindo ao meu portfólio! Sou um desenvolvedor front-end com experiência em HTML, CSS e JavaScript. Este repositório contém exemplos dos meus trabalhos e projetos, mostrando minhas habilidades e progresso no desenvolvimento web.
 
-###  Primeiros Passos:
----
-#### 🔹Marque esse projeto com uma ⭐
-#### 🔹Siga as orientações do que temos neste repositório 📚
+## Índice
 
+- [Sobre Mim](#sobre-mim)
+- [Habilidades](#habilidades)
+- [Projetos](#projetos)
+- [Formação](#formação)
+- [Contato](#contato)
 
-### Analisando nosso repositório!
----
-### Este repositório base é uma sugestão inicial, caso você ainda não tenha um layout que reflita seu estilo e personalidade. Sinta-se à vontade para modificar seu portfólio conforme desejar, aqui você encontrará:
-#### 🔹index.html: Documento HTML finalizado que você pode utilizar em seu projeto. Fonte, CSS e JavaScript já linkado e todas as sessões comentadas. Sinta-se a vontade para executar o seu próprio HTML caso deseje;
-#### 🔹style.css: Documento de CSS com instruções de estilo e também algumas sugestões para seu desenvolvimento
-#### 🔹script.js: Documento vazio para que possa aplicar sua lógica de validação de formulário. ESSA VALIDAÇÃO É CONSIDERADA UM DESAFIO EXTRA POR ISSO NÃO É OBRIGATORIA SUA IMPLEMENTAÇÃO.
-#### Ao clonar, ou realizar o download do projeto base, você tera essa apresentação:
+## Sobre Mim
 
+Sou um profissional motivado e dedicado, atualmente buscando uma oportunidade como **Desenvolvedor Front-End**. Estou sempre em busca de aprimorar minhas competências e enfrentar novos desafios no desenvolvimento web.
 
-<p align="center" >
-     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/101413385/168888313-d031e9e1-1449-4b73-bd3c-3102223097f3.png">
-</p>
+## Habilidades
 
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Desenvolvimento responsivo**
+
+## Projetos
+
+Aqui estão alguns dos projetos que desenvolvi:
+
+1. **[Decodificador de Texto](https://yuridorigon.github.io/codificadoralura/)**
+   - Descrição: Um projeto de codificação e decodificação de texto.
+   - Tecnologias: HTML, CSS, JavaScript.
+
+2. **[Jogo da Memória](https://yuridorigon.github.io/Memoriaprofissoes/)**
+   - Descrição: Um jogo da memória desenvolvido com HTML, CSS e JavaScript.
+   - Tecnologias: HTML, CSS, JavaScript.
+
+3. **[Index do Navegador Edge](https://yuridorigon.github.io/indexmicrosoft/)**
+   - Descrição: Cópia do navegador Microsoft Edge.
+   - Tecnologias: HTML, CSS.
+
+4. **[Catálogo de Tênis](https://yuridorigon.github.io/EVECShoes/)**
+   - Descrição: Um catálogo de tênis criado em HTML e CSS.
+   - Tecnologias: HTML, CSS.
+
+## Formação
+
+- **ONE | Especialização Front-End**
+  - Alura - 2025
+
+- **Curso HTML5 e CSS3**
+  - Curso em vídeo - 2022
+
+## Contato
+
+Você pode me encontrar nas redes sociais ou enviar uma mensagem:
+
+- **GitHub:** [YuriDorigon](https://github.com/YuriDorigon)
+- **LinkedIn:** [Yuri Dorigon](https://www.linkedin.com/in/yuridorigon/)
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
