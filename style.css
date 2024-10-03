@@ -1,4 +1,3 @@
-/* Este repositório base foi criado para te ajudar caso você não saiba como começar. Lembre-se de que o portfólio é a sua carta de apresentação e você deve dar a sua cara. Por isso, convidamos você a personalizá-lo de acordo com o seu estilo e preferências; não se limite apenas ao layout proposto no Figma. */
 :root {
     --cor-de-fundo: #F5F5F5;
     --cor-de-fundo-menu: #ffffff;
@@ -22,7 +21,6 @@ body {
     background-color: var(--cor-de-fundo);
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
     line-height: 1.6;
 }
@@ -44,7 +42,8 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    margin: 0 152px 0 152px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 
 .cabecalho__marca {
@@ -75,58 +74,50 @@ a {
     transform: scale(1.1);
 }
 
-.bolder{
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-
 /* ------------------------------ Seção Apresentação ------------------------------*/
 
 .apresentacao {
-    margin: 0 9.5rem;
-    /* 152px / 16 */
+    margin: 0 auto;
+    padding: 0 5%;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
 .apresentacao__conteiner {
-    width: 46.94rem;
-    /* 751px / 16 */
+    max-width: 100%;
     gap: 1.5rem;
 }
 
 .apresentacao__titulo {
     font-size: 2.75rem;
-    /* 52px / 16 */
     color: var(--cor-do-texto);
 }
 
 .apresentacao__subtitulo {
     font-size: 1.375rem;
-    /* 22px / 16 */
     color: var(--cor-do-texto);
 }
 
 .redes {
     display: flex;
     gap: 2rem;
-    /* 32px / 16 */
 }
 
-.redes__elemento::after, .redes__elemento::before {
+.redes__elemento::after,
+.redes__elemento::before {
     content: '';
     width: 0%;
     height: 1px;
     background: #000000;
     display: block;
     transition: 0.5s;
-  }
+}
 
-  .redes__elemento:hover::after, .redes__elemento:hover::before {
+.redes__elemento:hover::after,
+.redes__elemento:hover::before {
     width: 100%;
-  }
+}
 
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
 
@@ -140,8 +131,8 @@ a {
 }
 
 .sobre-mim__container {
-    margin: 0 9.5rem;
-    /* 152px / 16 */
+    margin: 0 auto;
+    padding: 0 5%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -154,8 +145,7 @@ a {
 }
 
 .sobre-mim__texto {
-    width: 46.94rem;
-    /* 751px / 16 */
+    max-width: 100%;
     font-size: 1rem;
     color: var(--cor-do-texto);
 }
@@ -164,7 +154,6 @@ b {
     font-weight: bold;
     text-decoration: underline;
 }
-
 
 /*------------------------------ Seção de Habilidades ------------------------------*/
 
@@ -213,10 +202,10 @@ b {
 .habilidades__nome,
 .hobbies__nome {
     font-weight: bold;
-    color: var(--cor-do-texto);
+    color: var (--cor-do-texto);
 }
 
-/* formaçoes */
+/* formações */
 
 .formacao {
     height: 600px;
@@ -227,7 +216,7 @@ b {
     gap: 2rem;
 }
 
-.formacao__titulo{
+.formacao__titulo {
     color: var(--cor-do-texto);
     font-size: 2rem;
     font-weight: bold;
@@ -239,13 +228,13 @@ b {
     gap: 1rem;
 }
 
-.formacao__elemento{
+.formacao__elemento {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.formacao__icone--container{
+.formacao__icone--container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,66 +244,67 @@ b {
     box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.212);
 }
 
-.formacao__icone{
+.formacao__icone {
     width: 60%;
 }
 
-.formacao__nome{
+.formacao__nome {
     color: var(--cor-do-texto);
     font-size: 1.3rem;
 }
 
-.formacao__detalhe{
+.formacao__detalhe {
     color: var(--cor-do-texto);
     font-size: 1rem;
     font-weight: 300;
 }
+
 /*------------------------------ Seção de Projetos --------------------------------*/
 
-.projetos{
-    margin: 0 9.5rem;
+.projetos {
+    margin: 0 auto;
+    padding: 0 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
 }
 
-.projetos__conteiner{
+.projetos__conteiner {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.projetos__container--texto{
+.projetos__container--texto {
     display: flex;
     flex-direction: column;
     gap: 8px;
-
 }
 
-.img-projeto{
-    width: 752px;
-    height: 435px;
+.img-projeto {
+    max-width: 100%;
+    height: auto;
 }
 
-.projetos__nome{
+.projetos__nome {
     font-size: 1.3rem;
     color: var(--cor-do-texto);
     font-weight: bold;
 }
 
-.projetos__descricao{
+.projetos__descricao {
     font-size: 1rem;
     font-weight: 300;
     color: var(--cor-do-texto);
 }
 
-.projetos__container--botoes{
+.projetos__container--botoes {
     display: flex;
     gap: 16px;
 }
 
-.ancora__repositorio{
+.ancora__repositorio {
     display: inline-block;
     border: #2A7AE4 1px solid;
     padding: 16px;
@@ -322,14 +312,14 @@ b {
     font-weight: 300;
 }
 
-.ancora__repositorio:hover{
+.ancora__repositorio:hover {
     background-color: #2A7AE4;
     padding: 16px;
     color: white;
     transition: 0.3s;
 }
 
-.ancora__site{
+.ancora__site {
     border: 1px solid;
     display: inline-block;
     background-color: #2A7AE4;
@@ -338,21 +328,21 @@ b {
     font-weight: 300;
 }
 
-.ancora__site:hover{
+.ancora__site:hover {
     border: #2A7AE4 1px solid;
     color: #2A7AE4;
     background-color: transparent;
     transition: 0.3s;
 }
 
-.reverse{
+.reverse {
     display: flex;
     flex-direction: row-reverse;
 }
 
 /*------------------------------ Seção de Contato ---------------------------------*/
 
-.contato{
+.contato {
     height: 780px;
     background-color: var(--cor-de-fundo-alt);
     display: flex;
@@ -362,27 +352,26 @@ b {
     gap: 32px;
 }
 
-.contato__textos{
+.contato__textos {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contato__titulo{
+.contato__titulo {
     font-size: 2rem;
     color: var(--cor-do-texto);
     font-weight: bold;
 }
 
-.contato__descricao{
+.contato__descricao {
     color: var(--cor-do-texto);
     font-weight: 300;
     text-align: center;
-    
 }
 
-.contato__formulario{
-    width: 1136px;
+.contato__formulario {
+    max-width: 100%;
     height: 309px;
     display: flex;
     flex-direction: column;
@@ -390,28 +379,59 @@ b {
     align-items: center;
 }
 
-.contato__campo{
+.contato__campo {
     height: 56px;
     border: transparent;
     width: 100%;
     box-shadow: 1px 1px 7px 2px #0000003b;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
 }
 
+.contato__campo--descricao {
+    height: 126px;
+}
+
+.ancora__enviar {
+    background-color: var(--cor-do-texto);
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: transparent;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
 .contato__campo--textarea{
-    height: 100px;
-    resize: none;
-    margin: 20px;
-    padding: 10px 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5; /* Ajuste conforme necessário */
+    height: 150px; /* Defina a altura do textarea */
+    box-sizing: border-box;
 }
 
 .contato__campo--textarea,.contato__campo{
     padding-left: 40px;
+    resize: none;
 }
 
 ::placeholder{
-    padding-left: 10px;
+    padding: 5px 0 0 px;
     color: #A2A2A2;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
 }
 
 .contato__botao{
@@ -436,6 +456,7 @@ b {
 
 /* Tablets e telas maiores */
 @media (min-width: 768px) {
+
     .cabecalho {
         flex-direction: row;
         justify-content: space-between;
@@ -450,27 +471,133 @@ b {
         font-size: 1.5rem;
     }
 
-    .navegacao__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
+    .navegacao {
+        display: none;
     }
 
-    .navegacao__elemento a {
+    .apresentacao{
+        width: 100%;
+        height: 210px;
+    }
+
+    .apresentacao__conteiner{
+        width: 524px;
+    }
+
+    .apresentacao__titulo{
+        font-size: 2rem;
+    }
+
+    .apresentacao__subtitulo{
         font-size: 1rem;
     }
+
+    .apresentacao__foto{
+        width: 146px;
+    }
+
+    .formacao{
+        margin-bottom: 32px;
+    }
+
+    .projetos__conteiner{
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .projetos__container--texto{
+        gap: 8px;
+    }
+
+    .contato__campo{
+        height: 56px;
+        border: transparent;
+        width: 50%;
+        box-shadow: 1px 1px 7px 2px #0000003b;
+        border-radius: 10px;
+    }
+
+
+    
 }
 
 /* Telas grandes */
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
 
-    /* Aqui você pode ajustar ainda mais o design para telas grandes */
-    .cabecalho__titulo {
-        font-size: 1.8rem;
+    .apresentacao{
+        margin: 0;
+        flex-direction: column-reverse;
     }
 
-    .navegacao__elemento a {
-        font-size: 1.1rem;
+    .apresentacao__conteiner{
+        width: 70%;
+        margin-bottom: 25px;
+    }
+
+    .apresentacao__titulo{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .apresentacao__subtitulo{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .redes{
+        justify-content: center;
+    }
+
+    .apresentacao__foto{
+        width: 50%;
+    }
+
+    .sobre-mim__container{
+        margin: 0 10px;
+    }
+
+    .sobre-mim__texto{
+        width: 100%;
+        height: 208px;
+    }
+    
+    .skills{
+        margin-top: 25px;
+        height: 1000px;
+    }
+
+    .habilidades__lista, .hobbies__lista{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .formacao{
+        margin-bottom: 25px;
+        height: 900px;
+    }
+
+    .formacao__lista{
+        flex-direction: column;
+    }
+
+    .projetos__conteiner{
+        flex-direction: column;
+    }
+
+    .projetos__container--texto{
+        align-items: center;
+    }
+
+    .contato__formulario{
+        width: 60%;
+    }
+
+    .contato__titulo{
+        font-size: 3rem;
+    }
+
+    .contato__descricao{
+        font-size: 1.5rem;
     }
 }
