@@ -48,17 +48,11 @@ a {
     justify-content: space-between;
 }
 
-.navegacao__lista{
-    font-size: 1rem;
-    display: flex;
-    gap: 32px;
-}
-
 .cabecalho__marca {
     display: flex;
     align-items: center;
-}
 
+}
 .cabecalho__logo {
     width: 41px;
     height: 41px;
@@ -67,6 +61,12 @@ a {
 .cabecalho__titulo {
     font-size: 1.2rem;
     text-align: center;
+}
+
+.navegacao__lista {
+    font-size: 1rem;
+    display: flex;
+    gap: 32px;
 }
 
 .navegacao__elemento a {
@@ -104,9 +104,6 @@ a {
     color: var(--cor-do-texto);
 }
 
-.apresentacao__foto{
-    width: 368px;
-}
 
 .redes {
     display: flex;
@@ -126,6 +123,10 @@ a {
 .redes__elemento:hover::after,
 .redes__elemento:hover::before {
     width: 100%;
+}
+
+.apresentacao__foto {
+    width: 368px;
 }
 
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
@@ -285,15 +286,15 @@ b {
     gap: 16px;
 }
 
+.img-projeto {
+    max-width: 100%;
+    height: auto;
+}
+
 .projetos__container--texto {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
-
-.img-projeto {
-    max-width: 100%;
-    height: auto;
 }
 
 .projetos__nome {
@@ -418,32 +419,35 @@ b {
 }
 
 
-.contato__campo--textarea{
+.contato__campo--textarea {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     font-size: 16px;
-    line-height: 1.5; /* Ajuste conforme necessário */
-    height: 150px; /* Defina a altura do textarea */
+    line-height: 1.5;
+    /* Ajuste conforme necessário */
+    height: 150px;
+    /* Defina a altura do textarea */
     box-sizing: border-box;
 }
 
-.contato__campo--textarea,.contato__campo{
+.contato__campo--textarea,
+.contato__campo {
     padding-left: 40px;
     resize: none;
 }
 
-::placeholder{
+::placeholder {
     padding: 5px 0 0 px;
     color: #A2A2A2;
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    
+
+
 }
 
-.contato__botao{
+.contato__botao {
     width: 165px;
     display: inline-block;
     background-color: #2A7AE4;
@@ -455,7 +459,7 @@ b {
     text-align: center;
 }
 
-.contato__botao:hover{
+.contato__botao:hover {
     transform: scale(1.1);
     transition: 0.3s;
     cursor: pointer;
@@ -484,66 +488,66 @@ b {
         display: none;
     }
 
-    .apresentacao{
+    .apresentacao {
         width: 100%;
         height: 210px;
     }
 
-    .apresentacao__conteiner{
+    .apresentacao__conteiner {
         width: 524px;
     }
 
-    .apresentacao__titulo{
+    .apresentacao__titulo {
         font-size: 2rem;
     }
 
-    .apresentacao__subtitulo{
+    .apresentacao__subtitulo {
         font-size: 1rem;
     }
 
-    .apresentacao__foto{
+    .apresentacao__foto {
         width: 146px;
     }
 
-    .skills{
+    .skills {
         height: 900px;
     }
 
-    .hobbies__lista{
+    .hobbies__lista {
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    .formacao{
+    .formacao {
         margin-bottom: 32px;
     }
 
-    .formacao__lista{
+    .formacao__lista {
         flex-direction: column;
         height: 661px;
         gap: 16px;
     }
 
-    .formacao__elemento{
+    .formacao__elemento {
         align-items: center;
     }
 
-    .projetos__conteiner{
+    .projetos__conteiner {
         flex-direction: column;
         align-items: start;
         gap: 16px;
     }
 
-    .formacao__icone--container{
+    .formacao__icone--container {
         width: 350px;
         height: 158px;
     }
 
-    .projetos__container--texto{
+    .projetos__container--texto {
         gap: 8px;
     }
 
-    .contato__campo{
+    .contato__campo {
         height: 80px;
         border: transparent;
         width: 75%;
@@ -551,98 +555,97 @@ b {
         border-radius: 10px;
     }
 
-    .contato__campo--textarea{
+    .contato__campo--textarea {
         height: 200px;
     }
-    
 }
 
 /* Telas grandes */
 @media (max-width: 768px) {
 
-    .cabecalho{
+    .cabecalho {
         justify-content: center;
         height: 100px;
     }
 
-    .navegacao__lista{
+    .navegacao__lista {
         display: none;
     }
 
-    .apresentacao{
+    .apresentacao {
         margin: 0;
         flex-direction: column-reverse;
     }
 
-    .apresentacao__conteiner{
+    .apresentacao__conteiner {
         width: 70%;
         margin-bottom: 25px;
     }
 
-    .apresentacao__titulo{
+    .apresentacao__titulo {
         font-size: 1.6rem;
         text-align: center;
     }
 
-    .apresentacao__subtitulo{
+    .apresentacao__subtitulo {
         font-size: 1rem;
         text-align: center;
     }
 
-    .redes{
+    .redes {
         justify-content: center;
     }
 
-    .apresentacao__foto{
+    .apresentacao__foto {
         width: 50%;
     }
 
-    .sobre-mim__container{
+    .sobre-mim__container {
         margin: 0 10px;
     }
 
-    .sobre-mim__texto{
+    .sobre-mim__texto {
         width: 100%;
-        height: 208px;
     }
-    
-    .skills{
+
+    .skills {
         margin-top: 25px;
         height: 1300px;
     }
 
-    .habilidades__lista, .hobbies__lista{
+    .habilidades__lista,
+    .hobbies__lista {
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    .formacao{
+    .formacao {
         margin-bottom: 25px;
         height: 900px;
     }
 
-    .formacao__lista{
+    .formacao__lista {
         flex-direction: column;
     }
 
-    .projetos__conteiner{
+    .projetos__conteiner {
         flex-direction: column;
     }
 
-    .projetos__container--texto{
+    .projetos__container--texto {
         align-items: center;
     }
 
-    .contato__formulario{
+    .contato__formulario {
         width: 60%;
     }
 
-    .contato__titulo{
+    .contato__titulo {
         font-size: 3rem;
         text-align: center;
     }
 
-    .contato__descricao{
+    .contato__descricao {
         font-size: 1.5rem;
     }
 }
