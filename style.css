@@ -608,7 +608,7 @@ b {
     
     .skills{
         margin-top: 25px;
-        height: 1000px;
+        height: 1300px;
     }
 
     .habilidades__lista, .hobbies__lista{
@@ -639,6 +639,7 @@ b {
 
     .contato__titulo{
         font-size: 3rem;
+        text-align: center;
     }
 
     .contato__descricao{
