@@ -464,7 +464,7 @@ b {
 /* ------------------------------ Responsividade ---------------------------------------*/
 
 /* Tablets e telas maiores */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
     .cabecalho {
         flex-direction: row;
@@ -505,8 +505,27 @@ b {
         width: 146px;
     }
 
+    .skills{
+        height: 900px;
+    }
+
+    .hobbies__lista{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .formacao{
         margin-bottom: 32px;
+    }
+
+    .formacao__lista{
+        flex-direction: column;
+        height: 661px;
+        gap: 16px;
+    }
+
+    .formacao__elemento{
+        align-items: center;
     }
 
     .projetos__conteiner{
@@ -515,24 +534,40 @@ b {
         gap: 16px;
     }
 
+    .formacao__icone--container{
+        width: 350px;
+        height: 158px;
+    }
+
     .projetos__container--texto{
         gap: 8px;
     }
 
     .contato__campo{
-        height: 56px;
+        height: 80px;
         border: transparent;
-        width: 50%;
+        width: 75%;
         box-shadow: 1px 1px 7px 2px #0000003b;
         border-radius: 10px;
     }
 
-
+    .contato__campo--textarea{
+        height: 200px;
+    }
     
 }
 
 /* Telas grandes */
 @media (max-width: 768px) {
+
+    .cabecalho{
+        justify-content: center;
+        height: 100px;
+    }
+
+    .navegacao__lista{
+        display: none;
+    }
 
     .apresentacao{
         margin: 0;
