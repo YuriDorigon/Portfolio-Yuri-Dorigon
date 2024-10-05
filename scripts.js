@@ -1,4 +1,3 @@
-
 function enviarMensagem() {
     var nome = document.getElementById('nome').value;
     var mensagem = document.getElementById('mensagem').value;
@@ -12,13 +11,12 @@ function enviarMensagem() {
             showConfirmButton: false,
             timer: 2000
         });
-    } else{
+    } else {
 
         var url = `https://wa.me/5548991136703?text=Ola,%20me%20chamo%20${nome}!!%0A${mensagem}`;
         window.open(url, '_blank');
     }
 
 
-    
-}
 
+}
