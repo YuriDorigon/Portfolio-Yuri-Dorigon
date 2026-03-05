@@ -1,11 +1,10 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Yuri | Desenvolvedor Full Stack',
-  description: 'Portfólio de Yuri, desenvolvedor focado na criação de interfaces modernas e sistemas web para empresas.',
+  title: 'Yuri | Desenvolvedor Front-End React',
+  description: 'Portfólio de Yuri, desenvolvedor Front-End especializado em React, HTML, CSS e Next.js.',
 };
 
 export default function RootLayout({

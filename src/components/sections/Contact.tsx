@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -39,7 +38,7 @@ export default function Contact() {
     console.log(values);
     toast({
       title: "Mensagem Enviada",
-      description: "Obrigado pelo contato! Responderei em breve.",
+      description: "Obrigado pelo contato! Responderei o mais rápido possível.",
     });
     form.reset();
   }
@@ -49,24 +48,24 @@ export default function Contact() {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-6">CONTATO</h2>
-            <p className="text-lg text-muted-foreground uppercase tracking-[0.2em]">Vamos construir algo juntos</p>
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-6 uppercase">Contato</h2>
+            <p className="text-lg text-muted-foreground uppercase tracking-[0.2em]">Disponível para novos desafios profissionais</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div className="space-y-12">
               <div className="space-y-6">
-                <div className="group flex items-center gap-4">
+                <a href="mailto:hello@yuri.dev" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="p-3 bg-background rounded-full group-hover:bg-accent transition-colors">
                     <Mail className="w-5 h-5 group-hover:text-white" />
                   </div>
                   <div>
-                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">E-mail</h4>
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">E-mail Profissional</h4>
                     <p className="text-xl font-medium">hello@yuri.dev</p>
                   </div>
-                </div>
+                </a>
                 
-                <a href="#" className="group flex items-center gap-4">
+                <a href="https://linkedin.com/in/yuri" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="p-3 bg-background rounded-full group-hover:bg-accent transition-colors">
                     <Linkedin className="w-5 h-5 group-hover:text-white" />
                   </div>
@@ -76,7 +75,7 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <a href="#" className="group flex items-center gap-4">
+                <a href="https://github.com/yuri" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="p-3 bg-background rounded-full group-hover:bg-accent transition-colors">
                     <Github className="w-5 h-5 group-hover:text-white" />
                   </div>
@@ -88,8 +87,8 @@ export default function Contact() {
               </div>
               
               <div className="pt-8 border-t border-border">
-                <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-4">Disponibilidade</h4>
-                <p className="text-muted-foreground">Atualmente aberto para novas oportunidades e parcerias em projetos freelancer.</p>
+                <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-4">Status Atual</h4>
+                <p className="text-muted-foreground">Buscando oportunidade como Desenvolvedor Front-End. Resido no Brasil e trabalho remotamente.</p>
               </div>
             </div>
 
@@ -101,7 +100,7 @@ export default function Contact() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="uppercase text-[10px] tracking-widest font-bold">Nome</FormLabel>
+                        <FormLabel className="uppercase text-[10px] tracking-widest font-bold">Nome Completo</FormLabel>
                         <FormControl>
                           <Input placeholder="Seu nome" {...field} className="bg-transparent border-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-accent transition-all px-0" />
                         </FormControl>
@@ -114,7 +113,7 @@ export default function Contact() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="uppercase text-[10px] tracking-widest font-bold">E-mail</FormLabel>
+                        <FormLabel className="uppercase text-[10px] tracking-widest font-bold">E-mail para Retorno</FormLabel>
                         <FormControl>
                           <Input placeholder="seu@email.com" {...field} className="bg-transparent border-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-accent transition-all px-0" />
                         </FormControl>
@@ -127,10 +126,10 @@ export default function Contact() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="uppercase text-[10px] tracking-widest font-bold">Mensagem</FormLabel>
+                        <FormLabel className="uppercase text-[10px] tracking-widest font-bold">Mensagem ou Proposta</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Como posso ajudar seu projeto?" 
+                            placeholder="Como posso agregar valor ao seu time?" 
                             className="bg-transparent border-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-accent transition-all min-h-[120px] px-0 resize-none" 
                             {...field} 
                           />
@@ -140,7 +139,7 @@ export default function Contact() {
                     )}
                   />
                   <Button type="submit" className="w-full bg-primary hover:bg-accent text-primary-foreground font-bold uppercase tracking-[0.2em] transition-all py-6">
-                    Enviar Mensagem
+                    Enviar Mensagem Profissional
                   </Button>
                 </form>
               </Form>

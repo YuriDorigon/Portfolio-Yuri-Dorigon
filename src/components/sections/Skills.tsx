@@ -1,19 +1,18 @@
-
 "use client";
 
 export default function Skills() {
   const skillGroups = [
     {
-      title: "Frontend",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Framer Motion"]
+      title: "Frontend Principal",
+      skills: ["React", "JavaScript (ES6+)", "HTML5", "CSS3 / Vanilla CSS", "Next.js"]
     },
     {
-      title: "Backend & Infra",
-      skills: ["Node.js", "Firebase", "PostgreSQL", "API REST", "DevOps", "Auth & Security"]
+      title: "Ecossistema",
+      skills: ["Tailwind CSS", "TypeScript", "Shadcn UI", "Context API / Hooks", "Responsive Design"]
     },
     {
-      title: "Ferramentas",
-      skills: ["Git & GitHub", "Figma", "Genkit AI", "Docker", "Sistemas Distribuídos"]
+      title: "Ferramentas & Backend",
+      skills: ["Git", "GitHub", "Firebase", "API REST", "Figma (UI/UX)"]
     }
   ];
 
@@ -21,7 +20,7 @@ export default function Skills() {
     <section id="skills" className="py-24 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl">
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-16">TECNOLOGIAS</h2>
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-16 uppercase">Tecnologias</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {skillGroups.map((group) => (
@@ -42,7 +41,7 @@ export default function Skills() {
           
           <div className="mt-20 p-8 border border-border rounded-sm bg-background shadow-sm">
             <p className="text-xl leading-relaxed text-muted-foreground italic">
-              "Desenvolver aplicações performantes não é apenas sobre o código, mas sobre criar uma arquitetura escalável e uma experiência de usuário intuitiva."
+              "Foco em escrever código limpo e interfaces que resolvem problemas reais de negócio, unindo a robustez do React com a simplicidade do HTML e CSS bem estruturados."
             </p>
           </div>
         </div>
