@@ -20,7 +20,7 @@ export default function About() {
           <div className="lg:sticky lg:top-32 lg:w-1/3 space-y-8 w-full">
             <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-primary leading-none uppercase">Sobre <br />Mim</h2>
             
-            <div className="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto lg:mx-0 aspect-square rounded-md overflow-hidden border border-border shadow-sm grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto lg:mx-0 aspect-square rounded-full overflow-hidden border-2 border-border shadow-md grayscale hover:grayscale-0 transition-all duration-500">
               {profileImg ? (
                 <Image 
                   src={profileImg} 
