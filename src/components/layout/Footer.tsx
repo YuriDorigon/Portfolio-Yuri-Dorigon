@@ -18,20 +18,20 @@ export default function Footer() {
               YURI<span className="text-accent">.</span>
             </Link>
             <p className="text-xs text-muted-foreground uppercase tracking-widest">
-              © {currentYear} Yuri Devfolio. All Rights Reserved.
+              © {currentYear} Yuri Portfolio. Desenvolvido com foco em resultados.
             </p>
           </div>
           
           <div className="flex gap-8">
-            <Link href="#projects" className="text-xs font-bold uppercase tracking-widest hover:text-accent transition-colors">Work</Link>
-            <Link href="#skills" className="text-xs font-bold uppercase tracking-widest hover:text-accent transition-colors">Stack</Link>
-            <Link href="#about" className="text-xs font-bold uppercase tracking-widest hover:text-accent transition-colors">About</Link>
-            <Link href="#contact" className="text-xs font-bold uppercase tracking-widest hover:text-accent transition-colors">Contact</Link>
+            <Link href="#projects" className="text-xs font-bold uppercase tracking-widest hover:text-accent transition-colors">Projetos</Link>
+            <Link href="#skills" className="text-xs font-bold uppercase tracking-widest hover:text-accent transition-colors">Habilidades</Link>
+            <Link href="#about" className="text-xs font-bold uppercase tracking-widest hover:text-accent transition-colors">Sobre</Link>
+            <Link href="#contact" className="text-xs font-bold uppercase tracking-widest hover:text-accent transition-colors">Contato</Link>
           </div>
 
           <div className="flex items-center gap-4">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Status: Open for work</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Status: Aberto para oportunidades</span>
           </div>
         </div>
       </div>

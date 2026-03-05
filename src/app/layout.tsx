@@ -4,8 +4,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Yuri | Full Stack Developer',
-  description: 'Portfolio of Yuri, a full stack developer specializing in minimalist and performant web applications.',
+  title: 'Yuri | Desenvolvedor Full Stack',
+  description: 'Portfólio de Yuri, desenvolvedor focado na criação de interfaces modernas e sistemas web para empresas.',
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

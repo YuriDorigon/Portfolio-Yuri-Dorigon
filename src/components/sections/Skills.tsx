@@ -5,15 +5,15 @@ export default function Skills() {
   const skillGroups = [
     {
       title: "Frontend",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js"]
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Framer Motion"]
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "PostgreSQL", "Prisma", "Redis", "Firebase", "REST & GraphQL"]
+      title: "Backend & Infra",
+      skills: ["Node.js", "Firebase", "PostgreSQL", "API REST", "DevOps", "Auth & Security"]
     },
     {
-      title: "Design",
-      skills: ["UI/UX Design", "Figma", "Design Systems", "Prototyping", "Branding"]
+      title: "Ferramentas",
+      skills: ["Git & GitHub", "Figma", "Genkit AI", "Docker", "Sistemas Distribuídos"]
     }
   ];
 
@@ -21,7 +21,7 @@ export default function Skills() {
     <section id="skills" className="py-24 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl">
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-16">TECH STACK</h2>
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-16">TECNOLOGIAS</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {skillGroups.map((group) => (
@@ -40,9 +40,9 @@ export default function Skills() {
             ))}
           </div>
           
-          <div className="mt-20 p-8 border border-border rounded-sm bg-background">
+          <div className="mt-20 p-8 border border-border rounded-sm bg-background shadow-sm">
             <p className="text-xl leading-relaxed text-muted-foreground italic">
-              "Building performant applications isn't just about the code. It's about crafting an architecture that scales and a user experience that feels invisible."
+              "Desenvolver aplicações performantes não é apenas sobre o código, mas sobre criar uma arquitetura escalável e uma experiência de usuário intuitiva."
             </p>
           </div>
         </div>

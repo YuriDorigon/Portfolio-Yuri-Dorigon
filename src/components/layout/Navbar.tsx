@@ -17,10 +17,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Projetos", href: "#projects" },
+    { name: "Habilidades", href: "#skills" },
+    { name: "Sobre", href: "#about" },
+    { name: "Contato", href: "#contact" },
   ];
 
   return (
@@ -49,7 +49,6 @@ export default function Navbar() {
           ))}
         </div>
         <div className="md:hidden">
-          {/* Simple mobile trigger can be added if needed, sticking to minimalist desktop first as per reference */}
         </div>
       </div>
     </nav>
