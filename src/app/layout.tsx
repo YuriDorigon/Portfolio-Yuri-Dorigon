@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Yuri | Desenvolvedor Front-End React',
-  description: 'Portfólio de Yuri, desenvolvedor Front-End especializado em React, HTML, CSS e Next.js.',
+  title: 'Yuri Dorigon | Desenvolvedor Front-End',
+  description: 'Portfólio de Yuri Dorigon, desenvolvedor Front-End especializado em React, HTML, CSS e Next.js.',
 };
 
 export default function RootLayout({

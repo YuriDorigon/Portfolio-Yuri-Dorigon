@@ -9,25 +9,32 @@ import { Button } from "@/components/ui/button";
 export default function Projects() {
   const projects = [
     {
-      id: "project-1",
-      title: "Vantage E-com",
-      description: "Desenvolvimento de uma interface de e-commerce focada em conversão, resolvendo a complexidade de navegação em grandes inventários.",
-      tech: ["React", "TypeScript", "Tailwind", "Firebase"],
+      id: "decodificador",
+      title: "Decodificador de Texto",
+      description: "Desafio Alura Codificador. Uma aplicação para criptografar e descriptografar textos, focada em lógica de programação e manipulação de DOM.",
+      tech: ["HTML", "CSS", "JavaScript"],
       image: PlaceHolderImages.find(img => img.id === "project-1")?.imageUrl
     },
     {
-      id: "project-3",
-      title: "SyncFlow AI",
-      description: "Plataforma de produtividade que utiliza IA para simplificar a gestão de cronogramas complexos para equipes remotas.",
-      tech: ["Next.js", "React", "Genkit", "Tailwind"],
+      id: "jogo-memoria",
+      title: "Jogo da Memória",
+      description: "Projeto interativo desenvolvido para praticar manipulação de estados e eventos com JavaScript puro, garantindo uma experiência fluida.",
+      tech: ["HTML", "CSS", "JavaScript"],
       image: PlaceHolderImages.find(img => img.id === "project-3")?.imageUrl
     },
     {
-      id: "project-2",
-      title: "FinTrack Dashboard",
-      description: "Dashboard financeiro para visualização clara de dados críticos, transformando números complexos em gráficos intuitivos.",
-      tech: ["React", "Recharts", "CSS Modules", "JavaScript"],
+      id: "index-edge",
+      title: "Index Edge Microsoft",
+      description: "Cópia da interface do navegador Edge. Projeto focado em precisão visual e domínio de CSS Layout (Flexbox e Grid).",
+      tech: ["HTML", "CSS"],
       image: PlaceHolderImages.find(img => img.id === "project-2")?.imageUrl
+    },
+    {
+      id: "evecshoes",
+      title: "Evecshoes Catálogo",
+      description: "Catálogo de tênis responsivo. Demonstra habilidades em estruturação de semântica HTML e estilização avançada sem frameworks.",
+      tech: ["HTML", "CSS"],
+      image: PlaceHolderImages.find(img => img.id === "project-4")?.imageUrl
     }
   ];
 
@@ -35,14 +42,14 @@ export default function Projects() {
     <section id="projects" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary uppercase">Projetos React</h2>
-          <p className="text-muted-foreground uppercase tracking-widest text-sm">Focado em Soluções (03)</p>
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary uppercase">Projetos</h2>
+          <p className="text-muted-foreground uppercase tracking-widest text-sm">Trabalhos Selecionados ({projects.length})</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="flex flex-col group border border-border rounded-md overflow-hidden bg-card transition-all hover:shadow-md">
-              <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+              <div className="relative aspect-[16/9] overflow-hidden bg-muted">
                 {project.image ? (
                   <Image
                     src={project.image}
@@ -55,27 +62,29 @@ export default function Projects() {
                 )}
               </div>
               
-              <div className="p-6 flex flex-col flex-1 gap-4">
-                <h3 className="text-xl font-bold tracking-tight">{project.title}</h3>
+              <div className="p-8 flex flex-col flex-1 gap-4">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-2xl font-bold tracking-tight">{project.title}</h3>
+                </div>
                 
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                <p className="text-muted-foreground leading-relaxed flex-1">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map(t => (
-                    <Badge key={t} variant="secondary" className="font-mono text-[9px] uppercase">
+                    <Badge key={t} variant="secondary" className="font-mono text-[10px] uppercase px-3">
                       {t}
                     </Badge>
                   ))}
                 </div>
 
-                <div className="flex gap-3 pt-2">
-                  <Button variant="default" size="sm" className="flex-1 gap-2 font-bold uppercase tracking-wider text-[10px]">
-                    <ExternalLink className="w-3 h-3" /> Ver Projeto
+                <div className="flex gap-4 pt-2">
+                  <Button variant="default" className="flex-1 gap-2 font-bold uppercase tracking-wider text-[10px] py-6">
+                    <ExternalLink className="w-3 h-3" /> Ver Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="flex-1 gap-2 font-bold uppercase tracking-wider text-[10px]">
-                    <Github className="w-3 h-3" /> Código
+                  <Button variant="outline" className="flex-1 gap-2 font-bold uppercase tracking-wider text-[10px] py-6">
+                    <Github className="w-3 h-3" /> Repositório
                   </Button>
                 </div>
               </div>

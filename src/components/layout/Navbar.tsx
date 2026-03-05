@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -18,8 +17,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Projetos", href: "#projects" },
-    { name: "Habilidades", href: "#skills" },
     { name: "Sobre", href: "#about" },
+    { name: "Habilidades", href: "#skills" },
     { name: "Contato", href: "#contact" },
   ];
 
@@ -33,9 +32,9 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link 
           href="/" 
-          className="text-xl font-semibold tracking-tighter hover:text-accent transition-colors"
+          className="text-xl font-bold tracking-tighter hover:text-accent transition-colors"
         >
-          YURI<span className="text-accent">.</span>
+          YURI DORIGON<span className="text-accent">.</span>
         </Link>
         <div className="hidden md:flex gap-8">
           {navLinks.map((link) => (

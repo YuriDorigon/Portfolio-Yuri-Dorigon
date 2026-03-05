@@ -1,6 +1,21 @@
 "use client";
 
+import { BookOpen, Briefcase, Heart, GraduationCap } from "lucide-react";
+
 export default function About() {
+  const formation = [
+    { school: "Unicesumar", course: "Análise e Desenvolvimento de Sistemas", status: "Cursando", icon: <GraduationCap className="w-4 h-4" /> },
+    { school: "Alura", course: "ONE | Especialização Front-End", year: "2025", icon: <BookOpen className="w-4 h-4" /> },
+    { school: "Curso em Vídeo", course: "HTML5 e CSS3", year: "2022", icon: <BookOpen className="w-4 h-4" /> }
+  ];
+
+  const hobbies = [
+    { name: "Futebol", icon: "⚽" },
+    { name: "Videogames", icon: "🎮" },
+    { name: "Músicas", icon: "🎧" },
+    { name: "Animais", icon: "🐾" }
+  ];
+
   return (
     <section id="about" className="py-24 bg-background border-t border-border">
       <div className="container mx-auto px-6">
@@ -9,41 +24,54 @@ export default function About() {
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary leading-none uppercase">Sobre <br />Mim</h2>
           </div>
           
-          <div className="lg:w-2/3 space-y-10">
+          <div className="lg:w-2/3 space-y-12">
             <div className="space-y-6">
               <p className="text-2xl md:text-3xl leading-snug font-medium text-foreground">
-                Sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor focado em front-end.
+                Profissional motivado, dedicado e em constante evolução técnica.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Tenho experiência construindo interfaces web e sistemas internos utilizando React, HTML, CSS e JavaScript. Meu foco é criar componentes reutilizáveis e interfaces performantes que garantam a melhor experiência para o usuário final.
+                Atualmente busco minha primeira oportunidade como Desenvolvedor Front-End. Com experiência prévia como Recepcionista, desenvolvi fortes habilidades interpessoais, organização e gerenciamento de tarefas, que hoje aplico na construção de interfaces centradas no usuário.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Estou constantemente aprimorando minhas habilidades em tecnologias modernas como Next.js para desenvolver aplicações mais eficientes e escaláveis. Busco uma oportunidade onde eu possa aplicar meu conhecimento técnico para ajudar a VIP Promotora a crescer através de tecnologia de ponta.
+                Minha transição para a tecnologia é impulsionada pela paixão em criar experiências web excepcionais. Além do desenvolvimento técnico, invisto em Oratória para garantir uma comunicação clara e eficiente em ambientes de equipe.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-border">
               <div>
-                <h4 className="font-bold text-sm uppercase tracking-widest mb-4">Formação & Foco</h4>
-                <ul className="space-y-4 text-sm">
-                  <li className="flex justify-between border-b border-border/50 pb-2">
-                    <span>Análise e Desenv. de Sistemas</span>
-                    <span className="text-muted-foreground">Em curso</span>
-                  </li>
-                  <li className="flex justify-between border-b border-border/50 pb-2">
-                    <span>Especialização Front-End</span>
-                    <span className="text-muted-foreground">Foco em React</span>
-                  </li>
-                </ul>
+                <h4 className="font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
+                  <Briefcase className="w-4 h-4 text-accent" /> Formação Acadêmica
+                </h4>
+                <div className="space-y-6">
+                  {formation.map((f, i) => (
+                    <div key={i} className="border-b border-border/50 pb-4">
+                      <p className="font-bold text-foreground">{f.course}</p>
+                      <div className="flex justify-between text-sm text-muted-foreground mt-1">
+                        <span>{f.school}</span>
+                        <span>{f.status || f.year}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
+
               <div>
-                <h4 className="font-bold text-sm uppercase tracking-widest mb-4">Competências Chave</h4>
-                <ul className="grid grid-cols-1 gap-3 text-sm">
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Desenvolvimento com React Hooks</li>
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Domínio de HTML5 e CSS3</li>
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Consumo de APIs REST</li>
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Mobile First & Responsividade</li>
-                </ul>
+                <h4 className="font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
+                  <Heart className="w-4 h-4 text-accent" /> Interesses & Hobbies
+                </h4>
+                <div className="grid grid-cols-2 gap-4">
+                  {hobbies.map((h, i) => (
+                    <div key={i} className="flex items-center gap-3 p-4 bg-secondary rounded-sm hover:bg-accent/10 transition-colors">
+                      <span className="text-xl">{h.icon}</span>
+                      <span className="font-medium text-sm">{h.name}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-8 p-6 bg-accent/5 border border-accent/10 rounded-sm">
+                  <p className="text-sm italic text-muted-foreground">
+                    "Estou sempre em busca de novos desafios no desenvolvimento web e de aprimorar minha oratória para ser um profissional mais completo."
+                  </p>
+                </div>
               </div>
             </div>
           </div>
