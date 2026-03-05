@@ -12,15 +12,25 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden bg-background">
       <div className="max-w-6xl w-full flex flex-col-reverse lg:flex-row items-center gap-12">
         <div className="flex-1 text-center lg:text-left animate-fade-in [animation-delay:200ms] opacity-0">
-          <span className="text-accent font-medium tracking-[0.2em] uppercase text-sm mb-6 block">
-            Desenvolvedor Front-End especializado em React
+          <span className="text-accent font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
+            Disponível para novos desafios
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.1] text-primary mb-8">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.1] text-primary mb-4">
             Yuri <br />
             <span className="text-foreground">Dorigon</span>
           </h1>
+          
+          <div className="mb-8">
+            <p className="text-xl md:text-2xl font-bold tracking-tight text-foreground/90 uppercase">
+              Front-End Developer
+            </p>
+            <p className="text-sm md:text-base font-medium tracking-[0.3em] text-accent uppercase mt-1">
+              React • JavaScript • HTML • CSS • Next.js
+            </p>
+          </div>
+
           <p className="max-w-xl text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 mx-auto lg:mx-0">
-            Desenvolvedor front-end especializado em React, com sólida base em HTML, CSS e JavaScript. Focado em construir interfaces modernas, responsivas e de alto desempenho para produtos digitais escaláveis.
+            Desenvolvedor front-end focado na criação de interfaces modernas e sistemas web funcionais utilizando React, HTML, CSS e JavaScript. Tenho experiência desenvolvendo aplicações web e estou constantemente evoluindo minhas habilidades com tecnologias como Next.js.
           </p>
           
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12">

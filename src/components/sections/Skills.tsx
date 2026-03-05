@@ -39,9 +39,12 @@ export default function Skills() {
             ))}
           </div>
           
-          <div className="mt-20 p-8 border border-border rounded-sm bg-background shadow-sm">
+          <div className="mt-20 p-8 border border-border rounded-sm bg-background shadow-sm space-y-4">
             <p className="text-xl leading-relaxed text-muted-foreground italic">
               "Foco em escrever código limpo e interfaces que resolvem problemas reais de negócio, unindo a robustez do React com a simplicidade do HTML e CSS bem estruturados."
+            </p>
+            <p className="text-lg leading-relaxed text-muted-foreground font-medium border-l-4 border-accent pl-6">
+              Também utilizo ferramentas de inteligência artificial para acelerar desenvolvimento, prototipação e resolução de problemas, mantendo sempre foco na qualidade e entendimento do código.
             </p>
           </div>
         </div>
