@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -12,28 +11,28 @@ export default function Projects() {
       title: "Vantage E-com",
       category: "E-Commerce / Web Design",
       year: "2024",
-      image: PlaceHolderImages.find(img => img.id === "project-1")?.imageUrl || ""
+      image: PlaceHolderImages.find(img => img.id === "project-1")?.imageUrl
     },
     {
       id: "project-2",
       title: "FinTrack Dashboard",
       category: "Fintech / Dashboard",
       year: "2023",
-      image: PlaceHolderImages.find(img => img.id === "project-2")?.imageUrl || ""
+      image: PlaceHolderImages.find(img => img.id === "project-2")?.imageUrl
     },
     {
       id: "project-3",
       title: "SyncFlow AI",
       category: "SaaS / AI Integration",
       year: "2024",
-      image: PlaceHolderImages.find(img => img.id === "project-3")?.imageUrl || ""
+      image: PlaceHolderImages.find(img => img.id === "project-3")?.imageUrl
     },
     {
       id: "project-4",
       title: "Studio CMS",
       category: "Open Source / Tooling",
       year: "2023",
-      image: PlaceHolderImages.find(img => img.id === "project-4")?.imageUrl || ""
+      image: PlaceHolderImages.find(img => img.id === "project-4")?.imageUrl
     }
   ];
 
@@ -49,13 +48,19 @@ export default function Projects() {
           {projects.map((project) => (
             <div key={project.id} className="group cursor-pointer">
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-muted mb-6">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  data-ai-hint="project showcase"
-                />
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    data-ai-hint="project showcase"
+                  />
+                ) : (
+                  <div className="flex items-center justify-center w-full h-full bg-muted">
+                    <span className="text-xs text-muted-foreground uppercase tracking-widest">Image missing</span>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               </div>
               <div className="flex justify-between items-start">
