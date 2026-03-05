@@ -9,13 +9,6 @@ export default function About() {
     { school: "Curso em Vídeo", course: "HTML5 e CSS3", year: "2022", icon: <BookOpen className="w-4 h-4" /> }
   ];
 
-  const hobbies = [
-    { name: "Futebol", icon: "⚽" },
-    { name: "Videogames", icon: "🎮" },
-    { name: "Músicas", icon: "🎧" },
-    { name: "Animais", icon: "🐾" }
-  ];
-
   return (
     <section id="about" className="py-24 bg-background border-t border-border">
       <div className="container mx-auto px-6">
@@ -27,13 +20,13 @@ export default function About() {
           <div className="lg:w-2/3 space-y-12">
             <div className="space-y-6">
               <p className="text-2xl md:text-3xl leading-snug font-medium text-foreground">
-                Profissional motivado, dedicado e em constante evolução técnica.
+                Estudante de ADS com foco em arquitetura front-end moderna.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Atualmente busco minha primeira oportunidade como Desenvolvedor Front-End. Com experiência prévia como Recepcionista, desenvolvi fortes habilidades interpessoais, organização e gerenciamento de tarefas, que hoje aplico na construção de interfaces centradas no usuário.
+                Minha transição para a tecnologia é fruto de uma decisão consciente de unir minha capacidade analítica com a paixão por criar produtos digitais. Sou estudante de Análise e Desenvolvimento de Sistemas e dedico meu tempo a dominar o ecossistema React, buscando sempre escrever código limpo e escalável.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Minha transição para a tecnologia é impulsionada pela paixão em criar experiências web excepcionais. Além do desenvolvimento técnico, invisto em Oratória para garantir uma comunicação clara e eficiente em ambientes de equipe.
+                Com experiência prévia em funções que exigiam alta organização e comunicação assertiva, trago para o desenvolvimento uma visão focada no usuário e na resolução de problemas de negócio. Estou em constante aprendizado de tecnologias como Next.js e TypeScript para entregar soluções cada vez mais eficientes.
               </p>
             </div>
 
@@ -57,19 +50,21 @@ export default function About() {
 
               <div>
                 <h4 className="font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
-                  <Heart className="w-4 h-4 text-accent" /> Interesses & Hobbies
+                  <Heart className="w-4 h-4 text-accent" /> Abordagem Profissional
                 </h4>
-                <div className="grid grid-cols-2 gap-4">
-                  {hobbies.map((h, i) => (
-                    <div key={i} className="flex items-center gap-3 p-4 bg-secondary rounded-sm hover:bg-accent/10 transition-colors">
-                      <span className="text-xl">{h.icon}</span>
-                      <span className="font-medium text-sm">{h.name}</span>
-                    </div>
-                  ))}
+                <div className="space-y-4">
+                  <div className="p-4 bg-secondary rounded-sm">
+                    <h5 className="font-bold text-sm uppercase mb-2">Foco no Usuário</h5>
+                    <p className="text-sm text-muted-foreground">Interfaces intuitivas que priorizam a facilidade de uso e acessibilidade.</p>
+                  </div>
+                  <div className="p-4 bg-secondary rounded-sm">
+                    <h5 className="font-bold text-sm uppercase mb-2">Código Limpo</h5>
+                    <p className="text-sm text-muted-foreground">Preocupação constante com a manutenibilidade e padrões de projeto modernos.</p>
+                  </div>
                 </div>
                 <div className="mt-8 p-6 bg-accent/5 border border-accent/10 rounded-sm">
                   <p className="text-sm italic text-muted-foreground">
-                    "Estou sempre em busca de novos desafios no desenvolvimento web e de aprimorar minha oratória para ser um profissional mais completo."
+                    "Busco colaborar com equipes que valorizam a excelência técnica e a inovação contínua na experiência do usuário."
                   </p>
                 </div>
               </div>

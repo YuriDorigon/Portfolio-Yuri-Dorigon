@@ -49,46 +49,48 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-6 uppercase">Contato</h2>
-            <p className="text-lg text-muted-foreground uppercase tracking-[0.2em]">Disponível para novos desafios profissionais</p>
+            <p className="text-lg text-muted-foreground uppercase tracking-[0.2em] max-w-2xl mx-auto">
+              Estou aberto a oportunidades como Desenvolvedor Front-End e interessado em colaborar com equipes que buscam criar produtos digitais modernos e eficientes.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div className="space-y-12">
               <div className="space-y-6">
-                <a href="mailto:hello@yuri.dev" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
+                <a href="mailto:yuri.dorigon@email.com" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="p-3 bg-background rounded-full group-hover:bg-accent transition-colors">
                     <Mail className="w-5 h-5 group-hover:text-white" />
                   </div>
                   <div>
                     <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">E-mail Profissional</h4>
-                    <p className="text-xl font-medium">hello@yuri.dev</p>
+                    <p className="text-xl font-medium">yuri.dorigon@email.com</p>
                   </div>
                 </a>
                 
-                <a href="https://linkedin.com/in/yuri" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
+                <a href="https://linkedin.com/in/yuridorigon" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="p-3 bg-background rounded-full group-hover:bg-accent transition-colors">
                     <Linkedin className="w-5 h-5 group-hover:text-white" />
                   </div>
                   <div>
                     <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">LinkedIn</h4>
-                    <p className="text-xl font-medium">linkedin.com/in/yuri</p>
+                    <p className="text-xl font-medium">linkedin.com/in/yuridorigon</p>
                   </div>
                 </a>
 
-                <a href="https://github.com/yuri" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
+                <a href="https://github.com/yuridorigon" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="p-3 bg-background rounded-full group-hover:bg-accent transition-colors">
                     <Github className="w-5 h-5 group-hover:text-white" />
                   </div>
                   <div>
                     <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">GitHub</h4>
-                    <p className="text-xl font-medium">github.com/yuri</p>
+                    <p className="text-xl font-medium">github.com/yuridorigon</p>
                   </div>
                 </a>
               </div>
               
               <div className="pt-8 border-t border-border">
-                <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-4">Status Atual</h4>
-                <p className="text-muted-foreground">Buscando oportunidade como Desenvolvedor Front-End. Resido no Brasil e trabalho remotamente.</p>
+                <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-4">Disponibilidade</h4>
+                <p className="text-muted-foreground">Buscando novos desafios em desenvolvimento front-end. Atuação remota ou presencial conforme projeto.</p>
               </div>
             </div>
 

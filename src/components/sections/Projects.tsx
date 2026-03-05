@@ -10,29 +10,29 @@ export default function Projects() {
   const projects = [
     {
       id: "decodificador",
-      title: "Decodificador de Texto",
-      description: "Desafio Alura Codificador. Uma aplicação para criptografar e descriptografar textos, focada em lógica de programação e manipulação de DOM.",
+      title: "Decodificador de Dados",
+      description: "Solução para criptografia e segurança de strings. Demonstra domínio de lógica algorítmica e manipulação eficiente do DOM com JavaScript puro.",
       tech: ["HTML", "CSS", "JavaScript"],
       image: PlaceHolderImages.find(img => img.id === "project-1")?.imageUrl
     },
     {
       id: "jogo-memoria",
-      title: "Jogo da Memória",
-      description: "Projeto interativo desenvolvido para praticar manipulação de estados e eventos com JavaScript puro, garantindo uma experiência fluida.",
+      title: "Engine de Jogo Interativo",
+      description: "Interface dinâmica focada em gerenciamento de estado e eventos em tempo real. Demonstra habilidades em interatividade e performance de UI.",
       tech: ["HTML", "CSS", "JavaScript"],
       image: PlaceHolderImages.find(img => img.id === "project-3")?.imageUrl
     },
     {
       id: "index-edge",
-      title: "Index Edge Microsoft",
-      description: "Cópia da interface do navegador Edge. Projeto focado em precisão visual e domínio de CSS Layout (Flexbox e Grid).",
+      title: "Interface de Navegador High-Fidelity",
+      description: "Réplica de interface complexa focada em precisão visual. Demonstra domínio avançado de layouts responsivos com Flexbox e CSS Grid.",
       tech: ["HTML", "CSS"],
       image: PlaceHolderImages.find(img => img.id === "project-2")?.imageUrl
     },
     {
       id: "evecshoes",
-      title: "Evecshoes Catálogo",
-      description: "Catálogo de tênis responsivo. Demonstra habilidades em estruturação de semântica HTML e estilização avançada sem frameworks.",
+      title: "Catálogo de Produtos Otimizado",
+      description: "Plataforma de catálogo responsiva com foco em semântica HTML e SEO, demonstrando estruturação de dados e estilização avançada.",
       tech: ["HTML", "CSS"],
       image: PlaceHolderImages.find(img => img.id === "project-4")?.imageUrl
     }
@@ -43,7 +43,7 @@ export default function Projects() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
           <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary uppercase">Projetos</h2>
-          <p className="text-muted-foreground uppercase tracking-widest text-sm">Trabalhos Selecionados ({projects.length})</p>
+          <p className="text-muted-foreground uppercase tracking-widest text-sm">Portfólio de Soluções Técnica ({projects.length})</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -67,7 +67,7 @@ export default function Projects() {
                   <h3 className="text-2xl font-bold tracking-tight">{project.title}</h3>
                 </div>
                 
-                <p className="text-muted-foreground leading-relaxed flex-1">
+                <p className="text-muted-foreground leading-relaxed flex-1 text-sm">
                   {project.description}
                 </p>
 
@@ -84,7 +84,7 @@ export default function Projects() {
                     <ExternalLink className="w-3 h-3" /> Ver Demo
                   </Button>
                   <Button variant="outline" className="flex-1 gap-2 font-bold uppercase tracking-wider text-[10px] py-6">
-                    <Github className="w-3 h-3" /> Repositório
+                    <Github className="w-3 h-3" /> Ver Código
                   </Button>
                 </div>
               </div>

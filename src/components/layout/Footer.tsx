@@ -17,7 +17,7 @@ export default function Footer() {
               YURI DORIGON<span className="text-accent">.</span>
             </Link>
             <p className="text-xs text-muted-foreground uppercase tracking-widest">
-              © {currentYear} Yuri Dorigon. Desenvolvido com foco em resultados técnicos.
+              © {currentYear} Yuri Dorigon. Desenvolvedor Front-End.
             </p>
           </div>
           
@@ -30,7 +30,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-4">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Disponível para a VIP Promotora</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Disponível para novos desafios profissionais</span>
           </div>
         </div>
       </div>

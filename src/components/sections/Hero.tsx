@@ -13,14 +13,14 @@ export default function Hero() {
       <div className="max-w-6xl w-full flex flex-col-reverse lg:flex-row items-center gap-12">
         <div className="flex-1 text-center lg:text-left animate-fade-in [animation-delay:200ms] opacity-0">
           <span className="text-accent font-medium tracking-[0.2em] uppercase text-sm mb-6 block">
-            Desenvolvedor Front-End & Estudante de Tecnologia
+            Desenvolvedor Front-End especializado em React
           </span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.1] text-primary mb-8">
             Yuri <br />
             <span className="text-foreground">Dorigon</span>
           </h1>
           <p className="max-w-xl text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 mx-auto lg:mx-0">
-            Especializado em React, com domínio sólido em HTML e CSS. Foco em criar interfaces modernas, funcionais e de alto desempenho para empresas que buscam inovação.
+            Desenvolvedor front-end especializado em React, com sólida base em HTML, CSS e JavaScript. Focado em construir interfaces modernas, responsivas e de alto desempenho para produtos digitais escaláveis.
           </p>
           
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12">
@@ -41,11 +41,11 @@ export default function Hero() {
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-8 text-sm font-semibold tracking-widest uppercase">
             <div className="flex flex-col gap-1">
-              <span className="text-muted-foreground text-[10px]">Especialidade</span>
-              <span>React / Frontend</span>
+              <span className="text-muted-foreground text-[10px]">Foco Principal</span>
+              <span>React & Next.js</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-muted-foreground text-[10px]">Formação</span>
+              <span className="text-muted-foreground text-[10px]">Status Acadêmico</span>
               <span>ADS @ Unicesumar</span>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function Hero() {
             {profileImg ? (
               <Image 
                 src={profileImg} 
-                alt="Yuri Dorigon - Desenvolvedor Front-End" 
+                alt="Yuri Dorigon - Desenvolvedor Front-End Profissional" 
                 fill 
                 className="object-cover"
                 priority
