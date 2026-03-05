@@ -1,8 +1,13 @@
+
 "use client";
 
-import { BookOpen, Briefcase, GraduationCap, Laptop } from "lucide-react";
+import Image from "next/image";
+import { BookOpen, Laptop, GraduationCap } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function About() {
+  const profileImg = PlaceHolderImages.find(img => img.id === "profile-photo")?.imageUrl;
+
   const formation = [
     { school: "Alura", course: "Programa Oracle Next Education – Especialização Front-End", year: "2025", icon: <BookOpen className="w-4 h-4" /> },
     { school: "Curso em Vídeo", course: "HTML5 e CSS3", year: "2022", icon: <BookOpen className="w-4 h-4" /> }
@@ -12,8 +17,23 @@ export default function About() {
     <section id="about" className="py-24 bg-background border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
-          <div className="lg:sticky lg:top-32 lg:w-1/3">
+          <div className="lg:sticky lg:top-32 lg:w-1/3 space-y-8">
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary leading-none uppercase">Sobre <br />Mim</h2>
+            
+            <div className="relative w-full aspect-square max-w-[300px] rounded-sm overflow-hidden border border-border shadow-sm grayscale hover:grayscale-0 transition-all duration-500">
+              {profileImg ? (
+                <Image 
+                  src={profileImg} 
+                  alt="Yuri Dorigon - Perfil Profissional" 
+                  fill 
+                  className="object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-muted flex items-center justify-center text-[10px] uppercase font-bold tracking-widest text-muted-foreground">
+                  Foto Profissional
+                </div>
+              )}
+            </div>
           </div>
           
           <div className="lg:w-2/3 space-y-12">
@@ -53,9 +73,6 @@ export default function About() {
                       <li className="text-sm text-muted-foreground flex gap-2">
                         <span className="text-accent">•</span> Auxílio na resolução de problemas de sistemas internos
                       </li>
-                      <li className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-accent">•</span> Apoio em tarefas relacionadas à infraestrutura de TI
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -76,8 +93,8 @@ export default function About() {
                     </div>
                   ))}
                   <div className="mt-4 p-4 bg-secondary rounded-sm border border-border">
-                    <p className="text-xs font-bold uppercase tracking-widest mb-1">Diferencial</p>
-                    <p className="text-sm text-muted-foreground">Formação contínua focada em desenvolvimento web prático e tecnologias do ecossistema React.</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest mb-1">Diferencial</p>
+                    <p className="text-sm text-muted-foreground">Foco em metodologias ágeis e escrita de código semântico e acessível.</p>
                   </div>
                 </div>
               </div>
