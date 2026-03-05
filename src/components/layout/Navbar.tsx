@@ -15,6 +15,7 @@ import {
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,8 +27,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Projetos", href: "#projects" },
-    { name: "Habilidades", href: "#skills" },
     { name: "Sobre", href: "#about" },
+    { name: "Habilidades", href: "#skills" },
     { name: "Contato", href: "#contact" },
   ];
 
@@ -35,13 +36,13 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-        scrolled ? "bg-background/80 backdrop-blur-md border-border py-4" : "bg-transparent py-6"
+        scrolled ? "bg-background/80 backdrop-blur-md border-border py-3 md:py-4" : "bg-transparent py-5 md:py-6"
       )}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link 
           href="/" 
-          className="text-xl font-bold tracking-tighter hover:text-accent transition-colors"
+          className="text-lg md:text-xl font-bold tracking-tighter hover:text-accent transition-colors"
         >
           YURI DORIGON<span className="text-accent">.</span>
         </Link>
@@ -61,30 +62,31 @@ export default function Navbar() {
 
         {/* Menu Mobile */}
         <div className="md:hidden">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <button className="p-2 hover:text-accent transition-colors" aria-label="Abrir menu">
+              <button className="p-2 -mr-2 hover:text-accent transition-colors" aria-label="Abrir menu">
                 <Menu className="w-6 h-6" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[80%] bg-background border-l border-border">
-              <SheetHeader>
-                <SheetTitle className="text-left text-xl font-bold tracking-tighter">MENU</SheetTitle>
+            <SheetContent side="right" className="w-[85%] bg-background border-l border-border flex flex-col p-8">
+              <SheetHeader className="text-left">
+                <SheetTitle className="text-xl font-bold tracking-tighter uppercase">Menu</SheetTitle>
               </SheetHeader>
-              <nav className="flex flex-col gap-8 mt-16">
+              <nav className="flex flex-col gap-6 mt-12 flex-1">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
-                    className="text-lg font-bold uppercase tracking-[0.1em] hover:text-accent transition-colors border-b border-border/50 pb-2"
+                    onClick={() => setOpen(false)}
+                    className="text-2xl font-bold uppercase tracking-tight hover:text-accent transition-colors border-b border-border/50 pb-4"
                   >
                     {link.name}
                   </a>
                 ))}
               </nav>
-              <div className="absolute bottom-12 left-6 right-6">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-                  Yuri Dorigon — Desenvolvedor Front-End
+              <div className="pt-8 border-t border-border/50">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground leading-relaxed">
+                  Yuri Dorigon — <br />Desenvolvedor Front-End
                 </p>
               </div>
             </SheetContent>

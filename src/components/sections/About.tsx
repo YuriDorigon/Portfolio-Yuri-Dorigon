@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -13,23 +14,24 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-background border-t border-border">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
-          <div className="lg:sticky lg:top-32 lg:w-1/3 space-y-8">
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary leading-none uppercase">Sobre <br />Mim</h2>
+    <section id="about" className="py-20 md:py-24 bg-background border-t border-border">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+          <div className="lg:sticky lg:top-32 lg:w-1/3 space-y-8 w-full">
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-primary leading-none uppercase">Sobre <br />Mim</h2>
             
-            <div className="relative w-full aspect-square max-w-[300px] rounded-sm overflow-hidden border border-border shadow-sm grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto lg:mx-0 aspect-square rounded-md overflow-hidden border border-border shadow-sm grayscale hover:grayscale-0 transition-all duration-500">
               {profileImg ? (
                 <Image 
                   src={profileImg} 
                   alt="Yuri Dorigon - Perfil Profissional" 
                   fill 
+                  sizes="(max-width: 768px) 280px, 320px"
                   className="object-cover"
                 />
               ) : (
                 <div className="w-full h-full bg-muted flex items-center justify-center text-[10px] uppercase font-bold tracking-widest text-muted-foreground">
-                  Foto Profissional
+                  Foto Perfil
                 </div>
               )}
             </div>
@@ -37,66 +39,68 @@ export default function About() {
           
           <div className="lg:w-2/3 space-y-12">
             <div className="space-y-6">
-              <p className="text-2xl md:text-3xl leading-snug font-medium text-foreground">
+              <p className="text-xl md:text-3xl leading-snug font-medium text-foreground">
                 Sou desenvolvedor front-end focado na criação de interfaces modernas e aplicações web utilizando React, JavaScript, HTML e CSS.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Atualmente trabalho na área da saúde atuando como recepcionista e suporte de TI em uma clínica médica, onde desenvolvi forte capacidade de organização, comunicação e resolução de problemas.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Paralelamente, venho construindo minha carreira em tecnologia através de estudos constantes e desenvolvimento de projetos práticos utilizando tecnologias modernas como React e Next.js.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Busco minha primeira oportunidade profissional como desenvolvedor para contribuir com soluções digitais eficientes enquanto continuo evoluindo tecnicamente.
-              </p>
+              <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
+                <p>
+                  Atualmente trabalho na área da saúde atuando como recepcionista e suporte de TI em uma clínica médica, onde desenvolvi forte capacidade de organização, comunicação e resolução de problemas.
+                </p>
+                <p>
+                  Paralelamente, venho construindo minha carreira em tecnologia através de estudos constantes e desenvolvimento de projetos práticos utilizando tecnologias modernas como React e Next.js.
+                </p>
+                <p>
+                  Busco minha primeira oportunidade profissional como desenvolvedor para contribuir com soluções digitais eficientes enquanto continuo evoluindo tecnicamente.
+                </p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-border">
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
-                  <Laptop className="w-4 h-4 text-accent" /> Experiência Profissional
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 pt-12 border-t border-border">
+              <div className="space-y-8">
+                <h4 className="font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] flex items-center gap-2 text-accent">
+                  <Laptop className="w-4 h-4" /> Experiência Profissional
                 </h4>
-                <div className="space-y-6">
-                  <div className="border-b border-border/50 pb-4">
-                    <p className="font-bold text-foreground">Recepcionista / Suporte de TI</p>
-                    <p className="text-sm text-accent font-medium">Tagis Medicina & Diagnóstico</p>
-                    <p className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">2023 — PRESENTE</p>
+                <div className="space-y-8">
+                  <div className="border-l-2 border-border/50 pl-6 space-y-2">
+                    <p className="font-bold text-foreground text-lg">Recepcionista / Suporte de TI</p>
+                    <p className="text-sm font-semibold text-accent">Tagis Medicina & Diagnóstico</p>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold">2023 — PRESENTE</p>
                     
-                    <ul className="mt-4 space-y-2">
-                      <li className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-accent">•</span> Atendimento e suporte direto a pacientes e equipe médica
-                      </li>
-                      <li className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-accent">•</span> Organização de agendas e processos internos
-                      </li>
-                      <li className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-accent">•</span> Suporte técnico básico em computadores e rede
-                      </li>
-                      <li className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-accent">•</span> Auxílio na resolução de problemas de sistemas internos
-                      </li>
+                    <ul className="mt-6 space-y-3">
+                      {[
+                        "Atendimento e suporte direto a pacientes e equipe médica",
+                        "Organização de agendas e processos internos",
+                        "Suporte técnico básico em computadores e rede",
+                        "Auxílio na resolução de problemas de sistemas internos"
+                      ].map((item, i) => (
+                        <li key={i} className="text-sm text-muted-foreground flex gap-3">
+                          <span className="text-accent shrink-0 mt-1">•</span> {item}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
-                  <GraduationCap className="w-4 h-4 text-accent" /> Formação Técnica
+              <div className="space-y-8">
+                <h4 className="font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] flex items-center gap-2 text-accent">
+                  <GraduationCap className="w-4 h-4" /> Formação Técnica
                 </h4>
-                <div className="space-y-6">
+                <div className="space-y-8">
                   {formation.map((f, i) => (
-                    <div key={i} className="border-b border-border/50 pb-4">
-                      <p className="font-bold text-foreground">{f.course}</p>
-                      <div className="flex justify-between text-sm text-muted-foreground mt-1">
-                        <span>{f.school}</span>
-                        <span>{f.year}</span>
+                    <div key={i} className="border-l-2 border-border/50 pl-6 space-y-2">
+                      <p className="font-bold text-foreground text-lg leading-tight">{f.course}</p>
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm text-muted-foreground gap-1">
+                        <span className="font-medium">{f.school}</span>
+                        <span className="text-xs uppercase tracking-widest font-bold">{f.year}</span>
                       </div>
                     </div>
                   ))}
-                  <div className="mt-4 p-4 bg-secondary rounded-sm border border-border">
-                    <p className="text-[10px] font-bold uppercase tracking-widest mb-1">Diferencial</p>
-                    <p className="text-sm text-muted-foreground">Experiência prática com desenvolvimento web, foco em código limpo, interfaces responsivas e boas práticas de acessibilidade. Interesse contínuo em evolução técnica e aprendizado de novas tecnologias do ecossistema JavaScript.</p>
+                  <div className="mt-8 p-6 bg-secondary rounded-md border border-border">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-2">Diferencial</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Experiência prática com desenvolvimento web, foco em código limpo, interfaces responsivas e boas práticas de acessibilidade. Interesse contínuo em evolução técnica e aprendizado de novas tecnologias do ecossistema JavaScript.
+                    </p>
                   </div>
                 </div>
               </div>
