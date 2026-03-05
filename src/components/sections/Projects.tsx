@@ -1,10 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { Github, ExternalLink } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+  DialogHeader,
+} from "@/components/ui/dialog";
 
 export default function Projects() {
   const projects = [
@@ -49,18 +54,45 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="flex flex-col group border border-border rounded-md overflow-hidden bg-card transition-all hover:shadow-md">
-              <div className="relative aspect-[16/9] overflow-hidden bg-muted">
-                {project.image ? (
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs">Preview do Projeto</div>
-                )}
-              </div>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <div className="relative aspect-[16/9] overflow-hidden bg-muted cursor-zoom-in">
+                    {project.image ? (
+                      <>
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                          <span className="text-white text-[10px] font-bold uppercase tracking-widest bg-black/60 px-4 py-2 rounded-full backdrop-blur-sm">
+                            Expandir Visualização
+                          </span>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs">Preview do Projeto</div>
+                    )}
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-5xl p-0 overflow-hidden bg-background border-border">
+                  <DialogHeader className="p-4 border-b border-border bg-card">
+                    <DialogTitle className="text-lg font-bold uppercase tracking-tight">{project.title}</DialogTitle>
+                  </DialogHeader>
+                  <div className="relative aspect-[16/9] w-full bg-black/5">
+                    {project.image && (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-contain p-2"
+                        quality={100}
+                      />
+                    )}
+                  </div>
+                </DialogContent>
+              </Dialog>
               
               <div className="p-8 flex flex-col flex-1 gap-4">
                 <div className="flex justify-between items-start">
@@ -71,21 +103,12 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map(t => (
                     <Badge key={t} variant="secondary" className="font-mono text-[10px] uppercase px-3">
                       {t}
                     </Badge>
                   ))}
-                </div>
-
-                <div className="flex gap-4 pt-2">
-                  <Button variant="default" className="flex-1 gap-2 font-bold uppercase tracking-wider text-[10px] py-6">
-                    <ExternalLink className="w-3 h-3" /> Ver Demo
-                  </Button>
-                  <Button variant="outline" className="flex-1 gap-2 font-bold uppercase tracking-wider text-[10px] py-6">
-                    <Github className="w-3 h-3" /> Ver Código
-                  </Button>
                 </div>
               </div>
             </div>
