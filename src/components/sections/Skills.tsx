@@ -8,11 +8,11 @@ export default function Skills() {
     },
     {
       title: "Ecossistema",
-      skills: ["Tailwind CSS", "TypeScript", "Shadcn UI", "Context API / Hooks", "Responsive Design"]
+      skills: ["Tailwind CSS", "TypeScript", "Responsive Design"]
     },
     {
       title: "Ferramentas & Backend",
-      skills: ["Git", "GitHub", "Firebase", "API REST", "Figma (UI/UX)"]
+      skills: ["Git", "GitHub", "Firebase", "Figma (UI/UX)"]
     }
   ];
 
