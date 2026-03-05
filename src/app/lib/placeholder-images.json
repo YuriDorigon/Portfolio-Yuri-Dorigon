@@ -3,33 +3,33 @@
   "placeholderImages": [
     {
       "id": "profile-photo",
-      "description": "Foto de perfil profissional",
+      "description": "Sua foto de perfil profissional",
       "imageUrl": "https://picsum.photos/seed/yuriprofile/400/400",
       "imageHint": "professional portrait"
     },
     {
       "id": "project-1",
-      "description": "Plataforma de e-commerce com design minimalista e checkout otimizado.",
+      "description": "Preview do projeto Decodificador de Dados",
       "imageUrl": "https://picsum.photos/seed/yuri1/1200/800",
-      "imageHint": "ecommerce minimalist"
+      "imageHint": "data security encryption"
     },
     {
       "id": "project-2",
-      "description": "Dashboard financeiro com suporte a modo escuro e gráficos em tempo real.",
+      "description": "Preview do projeto Clone de Interface de Navegador",
       "imageUrl": "https://picsum.photos/seed/yuri2/1200/800",
-      "imageHint": "dashboard finance"
+      "imageHint": "web browser interface"
     },
     {
       "id": "project-3",
-      "description": "Ferramenta de colaboração em tempo real para equipes remotas.",
+      "description": "Preview do projeto Jogo da Memória Interativo",
       "imageUrl": "https://picsum.photos/seed/yuri3/1200/800",
-      "imageHint": "collaboration software"
+      "imageHint": "memory game interaction"
     },
     {
       "id": "project-4",
-      "description": "Sistema de gestão de conteúdo (CMS) integrado com Inteligência Artificial.",
+      "description": "Preview do projeto Catálogo Responsivo de Produtos",
       "imageUrl": "https://picsum.photos/seed/yuri4/1200/800",
-      "imageHint": "artificial intelligence"
+      "imageHint": "product catalog ecommerce"
     }
   ]
 }
