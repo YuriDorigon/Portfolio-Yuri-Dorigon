@@ -1,10 +1,9 @@
-
 {
   "placeholderImages": [
     {
       "id": "profile-photo",
       "description": "Sua foto de perfil profissional",
-      "imageUrl": "https://imgur.com/a/VDAgdS6",
+      "imageUrl": "https://i.imgur.com/X1cPvzq.png",
       "imageHint": "professional portrait"
     },
     {
