@@ -30,7 +30,7 @@ export default function Hero() {
           </div>
 
           <p className="max-w-xl text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 mx-auto lg:mx-0">
-            Sou desenvolvedor front-end focado na criação de interfaces modernas e sistemas web funcionais utilizando React, HTML, CSS e JavaScript. Tenho experiência desenvolvendo aplicações web e estou constantemente evoluindo minhas habilidades com tecnologias como Next.js.
+            Sou desenvolvedor front-end focado na criação de interfaces modernas e aplicações web funcionais utilizando React, HTML, CSS e JavaScript. Tenho experiência desenvolvendo aplicações web e estou constantemente evoluindo minhas habilidades com tecnologias como Next.js.
           </p>
           
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12">
@@ -56,7 +56,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-muted-foreground text-[10px]">Atuação Atual</span>
-              <span>Suporte TI & Front-End</span>
+              <span>Recepcionista | Suporte de TI</span>
             </div>
           </div>
         </div>
