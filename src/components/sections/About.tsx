@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -39,13 +38,16 @@ export default function About() {
           <div className="lg:w-2/3 space-y-12">
             <div className="space-y-6">
               <p className="text-2xl md:text-3xl leading-snug font-medium text-foreground">
-                Sou desenvolvedor front-end focado na criação de interfaces modernas e aplicações web funcionais utilizando React, HTML, CSS e JavaScript.
+                Sou desenvolvedor front-end focado na criação de interfaces modernas e aplicações web utilizando React, JavaScript, HTML e CSS.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Atualmente trabalho na área da saúde atuando como recepcionista e suporte de TI em uma clínica médica, onde desenvolvi forte capacidade de organização, resolução de problemas e comunicação com diferentes equipes.
+                Atualmente trabalho na área da saúde atuando como recepcionista e suporte de TI em uma clínica médica, onde desenvolvi forte capacidade de organização, comunicação e resolução de problemas.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Paralelamente à minha atuação profissional, venho construindo minha carreira em tecnologia através de estudos constantes e desenvolvimento de projetos práticos utilizando tecnologias modernas como React, Next.js e JavaScript. Tenho grande interesse em participar de equipes de desenvolvimento onde eu possa contribuir com soluções digitais eficientes enquanto continuo evoluindo tecnicamente.
+                Paralelamente, venho construindo minha carreira em tecnologia através de estudos constantes e desenvolvimento de projetos práticos utilizando tecnologias modernas como React e Next.js.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+                Busco minha primeira oportunidade profissional como desenvolvedor para contribuir com soluções digitais eficientes enquanto continuo evoluindo tecnicamente.
               </p>
             </div>
 
@@ -94,7 +96,7 @@ export default function About() {
                   ))}
                   <div className="mt-4 p-4 bg-secondary rounded-sm border border-border">
                     <p className="text-[10px] font-bold uppercase tracking-widest mb-1">Diferencial</p>
-                    <p className="text-sm text-muted-foreground">Foco em metodologias ágeis e escrita de código semântico e acessível.</p>
+                    <p className="text-sm text-muted-foreground">Experiência prática com desenvolvimento web, foco em código limpo, interfaces responsivas e boas práticas de acessibilidade. Interesse contínuo em evolução técnica e aprendizado de novas tecnologias do ecossistema JavaScript.</p>
                   </div>
                 </div>
               </div>

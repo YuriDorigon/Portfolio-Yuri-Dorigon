@@ -22,21 +22,21 @@ export default function Projects() {
     },
     {
       id: "jogo-memoria",
-      title: "Engine de Jogo Interativo",
+      title: "Jogo da Memória Interativo",
       description: "Interface dinâmica focada em gerenciamento de estado e eventos em tempo real. Demonstra habilidades em interatividade e performance de UI.",
       tech: ["HTML", "CSS", "JavaScript"],
       image: PlaceHolderImages.find(img => img.id === "project-3")?.imageUrl
     },
     {
       id: "index-edge",
-      title: "Interface de Navegador High-Fidelity",
+      title: "Clone de Interface de Navegador",
       description: "Réplica de interface complexa focada em precisão visual. Demonstra domínio avançado de layouts responsivos com Flexbox e CSS Grid.",
       tech: ["HTML", "CSS"],
       image: PlaceHolderImages.find(img => img.id === "project-2")?.imageUrl
     },
     {
       id: "evecshoes",
-      title: "Catálogo de Produtos Otimizado",
+      title: "Catálogo Responsivo de Produtos",
       description: "Plataforma de catálogo responsiva com foco em semântica HTML e SEO, demonstrando estruturação de dados e estilização avançada.",
       tech: ["HTML", "CSS"],
       image: PlaceHolderImages.find(img => img.id === "project-4")?.imageUrl
@@ -48,7 +48,7 @@ export default function Projects() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
           <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary uppercase">Projetos</h2>
-          <p className="text-muted-foreground uppercase tracking-widest text-sm">Portfólio de Soluções Técnica ({projects.length})</p>
+          <p className="text-muted-foreground uppercase tracking-widest text-sm">Portfólio de Soluções Técnicas ({projects.length})</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -4,15 +4,15 @@ export default function Skills() {
   const skillGroups = [
     {
       title: "Frontend Principal",
-      skills: ["React", "JavaScript (ES6+)", "HTML5", "CSS3 / Vanilla CSS", "Next.js"]
+      skills: ["React", "JavaScript", "HTML5", "CSS3", "Next.js"]
     },
     {
       title: "Ecossistema",
       skills: ["Tailwind CSS", "TypeScript", "Responsive Design"]
     },
     {
-      title: "Ferramentas & Fluxo",
-      skills: ["Git", "GitHub", "Firebase", "Figma (UI/UX)"]
+      title: "Ferramentas",
+      skills: ["Git", "GitHub", "Firebase", "Figma"]
     }
   ];
 
