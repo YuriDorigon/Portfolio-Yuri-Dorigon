@@ -1,11 +1,10 @@
 "use client";
 
-import { BookOpen, Briefcase, Heart, GraduationCap } from "lucide-react";
+import { BookOpen, Briefcase, GraduationCap, Laptop } from "lucide-react";
 
 export default function About() {
   const formation = [
-    { school: "Unicesumar", course: "Análise e Desenvolvimento de Sistemas", status: "Cursando", icon: <GraduationCap className="w-4 h-4" /> },
-    { school: "Alura", course: "ONE | Especialização Front-End", year: "2025", icon: <BookOpen className="w-4 h-4" /> },
+    { school: "Alura", course: "Programa Oracle Next Education – Especialização Front-End", year: "2025", icon: <BookOpen className="w-4 h-4" /> },
     { school: "Curso em Vídeo", course: "HTML5 e CSS3", year: "2022", icon: <BookOpen className="w-4 h-4" /> }
   ];
 
@@ -20,20 +19,51 @@ export default function About() {
           <div className="lg:w-2/3 space-y-12">
             <div className="space-y-6">
               <p className="text-2xl md:text-3xl leading-snug font-medium text-foreground">
-                Estudante de ADS com foco em arquitetura front-end moderna.
+                Sou desenvolvedor front-end focado na criação de interfaces modernas e aplicações web funcionais utilizando React, HTML, CSS e JavaScript.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Minha transição para a tecnologia é fruto de uma decisão consciente de unir minha capacidade analítica com a paixão por criar produtos digitais. Sou estudante de Análise e Desenvolvimento de Sistemas e dedico meu tempo a dominar o ecossistema React, buscando sempre escrever código limpo e escalável.
+                Atualmente trabalho na área da saúde atuando como recepcionista e suporte de TI em uma clínica médica, onde desenvolvi forte capacidade de organização, resolução de problemas e comunicação com diferentes equipes.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                Com experiência prévia em funções que exigiam alta organização e comunicação assertiva, trago para o desenvolvimento uma visão focada no usuário e na resolução de problemas de negócio. Estou em constante aprendizado de tecnologias como Next.js e TypeScript para entregar soluções cada vez mais eficientes.
+                Paralelamente à minha atuação profissional, venho construindo minha carreira em tecnologia através de estudos constantes e desenvolvimento de projetos práticos utilizando tecnologias modernas como React, Next.js e JavaScript. Tenho grande interesse em participar de equipes de desenvolvimento onde eu possa contribuir com soluções digitais eficientes enquanto continuo evoluindo tecnicamente.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-border">
               <div>
                 <h4 className="font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
-                  <Briefcase className="w-4 h-4 text-accent" /> Formação Acadêmica
+                  <Laptop className="w-4 h-4 text-accent" /> Experiência Profissional
+                </h4>
+                <div className="space-y-6">
+                  <div className="border-b border-border/50 pb-4">
+                    <p className="font-bold text-foreground">Recepcionista / Suporte de TI</p>
+                    <p className="text-sm text-accent font-medium">Tagis Medicina & Diagnóstico</p>
+                    <p className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">2023 — PRESENTE</p>
+                    
+                    <ul className="mt-4 space-y-2">
+                      <li className="text-sm text-muted-foreground flex gap-2">
+                        <span className="text-accent">•</span> Atendimento e suporte direto a pacientes e equipe médica
+                      </li>
+                      <li className="text-sm text-muted-foreground flex gap-2">
+                        <span className="text-accent">•</span> Organização de agendas e processos internos
+                      </li>
+                      <li className="text-sm text-muted-foreground flex gap-2">
+                        <span className="text-accent">•</span> Suporte técnico básico em computadores e rede
+                      </li>
+                      <li className="text-sm text-muted-foreground flex gap-2">
+                        <span className="text-accent">•</span> Auxílio na resolução de problemas de sistemas internos
+                      </li>
+                      <li className="text-sm text-muted-foreground flex gap-2">
+                        <span className="text-accent">•</span> Apoio em tarefas relacionadas à infraestrutura de TI
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
+                  <GraduationCap className="w-4 h-4 text-accent" /> Formação Técnica
                 </h4>
                 <div className="space-y-6">
                   {formation.map((f, i) => (
@@ -41,31 +71,14 @@ export default function About() {
                       <p className="font-bold text-foreground">{f.course}</p>
                       <div className="flex justify-between text-sm text-muted-foreground mt-1">
                         <span>{f.school}</span>
-                        <span>{f.status || f.year}</span>
+                        <span>{f.year}</span>
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-2">
-                  <Heart className="w-4 h-4 text-accent" /> Abordagem Profissional
-                </h4>
-                <div className="space-y-4">
-                  <div className="p-4 bg-secondary rounded-sm">
-                    <h5 className="font-bold text-sm uppercase mb-2">Foco no Usuário</h5>
-                    <p className="text-sm text-muted-foreground">Interfaces intuitivas que priorizam a facilidade de uso e acessibilidade.</p>
+                  <div className="mt-4 p-4 bg-secondary rounded-sm border border-border">
+                    <p className="text-xs font-bold uppercase tracking-widest mb-1">Diferencial</p>
+                    <p className="text-sm text-muted-foreground">Formação contínua focada em desenvolvimento web prático e tecnologias do ecossistema React.</p>
                   </div>
-                  <div className="p-4 bg-secondary rounded-sm">
-                    <h5 className="font-bold text-sm uppercase mb-2">Código Limpo</h5>
-                    <p className="text-sm text-muted-foreground">Preocupação constante com a manutenibilidade e padrões de projeto modernos.</p>
-                  </div>
-                </div>
-                <div className="mt-8 p-6 bg-accent/5 border border-accent/10 rounded-sm">
-                  <p className="text-sm italic text-muted-foreground">
-                    "Busco colaborar com equipes que valorizam a excelência técnica e a inovação contínua na experiência do usuário."
-                  </p>
                 </div>
               </div>
             </div>

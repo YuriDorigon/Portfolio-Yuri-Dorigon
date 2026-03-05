@@ -11,7 +11,7 @@ export default function Skills() {
       skills: ["Tailwind CSS", "TypeScript", "Responsive Design"]
     },
     {
-      title: "Ferramentas & Backend",
+      title: "Ferramentas & Fluxo",
       skills: ["Git", "GitHub", "Firebase", "Figma (UI/UX)"]
     }
   ];
