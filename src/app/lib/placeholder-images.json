@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "E-commerce platform with minimalist design",
+      "imageUrl": "https://picsum.photos/seed/yuri1/1200/800",
+      "imageHint": "ecommerce minimalist"
+    },
+    {
+      "id": "project-2",
+      "description": "Financial dashboard with dark mode support",
+      "imageUrl": "https://picsum.photos/seed/yuri2/1200/800",
+      "imageHint": "dashboard finance"
+    },
+    {
+      "id": "project-3",
+      "description": "Real-time collaboration tool for remote teams",
+      "imageUrl": "https://picsum.photos/seed/yuri3/1200/800",
+      "imageHint": "collaboration software"
+    },
+    {
+      "id": "project-4",
+      "description": "AI-powered content management system",
+      "imageUrl": "https://picsum.photos/seed/yuri4/1200/800",
+      "imageHint": "artificial intelligence"
+    }
+  ]
+}
