@@ -13,15 +13,21 @@ export const metadata: Metadata = {
   title: 'Yuri Dorigon | Desenvolvedor Front-End',
   description: 'Portfólio de Yuri Dorigon, desenvolvedor Front-End especializado em React, HTML, CSS e Next.js.',
   icons: {
-    icon: [
-      { url: '/logo.svg?v=5', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=5', sizes: 'any' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png?v=5', sizes: '180x180', type: 'image/png' },
-    ],
+    icon: '/logo.svg?v=5',
   },
-  manifest: '/site.webmanifest?v=5',
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Yuri Dorigon',
+  jobTitle: 'Desenvolvedor Front-End',
+  url: 'https://yuridorigon.com.br',
+  sameAs: [
+    'https://linkedin.com/in/yuridorigon',
+    'https://github.com/yuridorigon'
+  ],
+  description: 'Desenvolvedor Front-End especializado em React, Next.js e tecnologias web modernas.'
 };
 
 export default function RootLayout({
@@ -31,6 +37,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`scroll-smooth ${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-body antialiased bg-background text-foreground">
         {children}
         <Toaster />
