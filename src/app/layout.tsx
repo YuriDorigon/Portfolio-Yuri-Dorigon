@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Yuri Dorigon | Desenvolvedor Front-End',
   description: 'Portfólio de Yuri Dorigon, desenvolvedor Front-End especializado em React, HTML, CSS e Next.js.',
+  icons: {
+    icon: '/vector.png',
+  },
 };
 
 export default function RootLayout({
