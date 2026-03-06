@@ -14,31 +14,31 @@ import {
 // 💡 Altere os nomes, descrições e tecnologias aqui:
 const PROJECTS = [
   {
-    id: "decodificador",
-    title: "Decodificador de Dados",
-    description: "Solução para criptografia e segurança de strings. Demonstra domínio de lógica algorítmica e manipulação eficiente do DOM com JavaScript puro.",
-    tech: ["HTML", "CSS", "JavaScript"],
+    id: "kennedy-credit",
+    title: "Landing Page Financeira Premium - Kennedy Promotora",
+    description: "Site institucional de alta performance desenvolvido para a Kennedy Promotora. Possui design moderno em tons de preto e dourado, navegação com smooth scroll e integração direta com WhatsApp para conversão de clientes.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
     imageKey: "project-1"
   },
   {
-    id: "jogo-memoria",
-    title: "Jogo da Memória Interativo",
-    description: "Interface dinâmica focada em gerenciamento de estado e eventos em tempo real. Demonstra habilidades em interatividade e performance de UI.",
+    id: "retorno-clinica-tagis",
+    title: "Gerenciador de Retornos de Pacientes",
+    description: "Aplicação web para controle de retornos de pacientes em clínica médica, com cadastro, edição, busca global e controle de acesso por perfis.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ShadCN UI", "Firebase"],
+    imageKey: "project-2"
+  },
+  {
+    id: "barbearia-artistas",
+    title: "Website Barbearia dos Artistas",
+    description: "Site institucional moderno desenvolvido para a Barbearia dos Artistas, focado em apresentação de serviços, identidade visual forte e experiência fluida para usuários em dispositivos móveis.",
     tech: ["HTML", "CSS", "JavaScript"],
     imageKey: "project-3"
   },
   {
-    id: "index-edge",
-    title: "Clone de Interface de Navegador",
-    description: "Réplica de interface complexa focada em precisão visual. Demonstra domínio avançado de layouts responsivos com Flexbox e CSS Grid.",
-    tech: ["HTML", "CSS"],
-    imageKey: "project-2"
-  },
-  {
-    id: "evecshoes",
-    title: "Catálogo Responsivo de Produtos",
-    description: "Plataforma de catálogo responsiva com foco em semântica HTML e SEO, demonstrando estruturação de dados e estilização avançada.",
-    tech: ["HTML", "CSS"],
+    id: "orcamentotagis",
+    title: "Orçamento Tagis - Sistema de Gestão",
+    description: "Sistema interno para criação e gerenciamento de orçamentos laboratoriais com gestão de exames, relatórios e organização de dados de pacientes.",
+    tech: ["Next.js", "TypeScript", "Zustand", "Firebase", "Tailwind CSS"],
     imageKey: "project-4"
   }
 ];

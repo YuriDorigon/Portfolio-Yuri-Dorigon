@@ -46,7 +46,7 @@ export default function Hero() {
               </a>
             </Button>
             <Button variant="ghost" asChild className="gap-2 font-bold uppercase tracking-wider text-[10px] md:text-xs py-5 md:py-6 px-6 md:px-8 h-auto">
-              <a href="mailto:yuri.dorigon@email.com">
+              <a href="mailto:yuridorigon13@gmail.com">
                 <Mail className="w-4 h-4" /> Contato
               </a>
             </Button>

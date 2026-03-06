@@ -58,13 +58,13 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="space-y-10 md:space-y-16">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 md:gap-8">
-                <a href="mailto:yuri.dorigon@email.com" className="group flex items-center gap-5 hover:opacity-80 transition-opacity">
+                <a href="mailto:yuridorigon13@gmail.com" className="group flex items-center gap-5 hover:opacity-80 transition-opacity">
                   <div className="p-4 bg-background rounded-full group-hover:bg-accent transition-colors shadow-sm">
                     <Mail className="w-5 h-5 group-hover:text-white" />
                   </div>
                   <div>
                     <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-1">E-mail Profissional</h4>
-                    <p className="text-base md:text-lg font-bold truncate">yuri.dorigon@email.com</p>
+                    <p className="text-base md:text-lg font-bold truncate">yuridorigon13@gmail.com</p>
                   </div>
                 </a>
                 
@@ -118,7 +118,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="uppercase text-[10px] tracking-widest font-bold">E-mail</FormLabel>
                         <FormControl>
-                          <Input placeholder="seu@email.com" {...field} className="bg-transparent border-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-accent transition-all px-0 h-12 text-base" />
+                          <Input placeholder="yuridorigon13@gmail.com" {...field} className="bg-transparent border-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-accent transition-all px-0 h-12 text-base" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
