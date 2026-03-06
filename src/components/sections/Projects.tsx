@@ -1,6 +1,7 @@
+
 "use client";
 
-import React, { memo } from "react";
+import React, { memo, useState, useEffect } from "react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
@@ -43,58 +44,72 @@ const PROJECTS = [
   }
 ];
 
-// Memoização do card para evitar re-renderizações durante o scroll
-const ProjectCard = memo(({ project }: { project: typeof PROJECTS[0] }) => {
+const ProjectCard = memo(({ project, mounted }: { project: typeof PROJECTS[0], mounted: boolean }) => {
   const imageUrl = PlaceHolderImages.find(img => img.id === project.imageKey)?.imageUrl;
 
   return (
     <div className="flex flex-col group border border-border rounded-md overflow-hidden bg-card transition-all hover:shadow-lg">
-      <Dialog>
-        <DialogTrigger asChild>
-          <div className="relative aspect-[16/9] overflow-hidden bg-muted cursor-zoom-in">
-            {imageUrl ? (
-              <>
+      {mounted ? (
+        <Dialog>
+          <DialogTrigger asChild>
+            <div className="relative aspect-[16/9] overflow-hidden bg-muted cursor-zoom-in">
+              {imageUrl ? (
+                <>
+                  <Image
+                    src={imageUrl}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 md:group-hover:opacity-100">
+                    <span className="text-white text-[10px] font-bold uppercase tracking-widest bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">
+                      Ampliar Imagem
+                    </span>
+                  </div>
+                </>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs font-bold uppercase">
+                  Sem Preview
+                </div>
+              )}
+            </div>
+          </DialogTrigger>
+          <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border w-[95vw] sm:w-full">
+            <DialogHeader className="p-4 border-b border-border bg-card">
+              <DialogTitle className="text-sm md:text-lg font-bold uppercase tracking-tight">
+                {project.title}
+              </DialogTitle>
+            </DialogHeader>
+            <div className="relative aspect-[16/9] w-full bg-black/5">
+              {imageUrl && (
                 <Image
                   src={imageUrl}
                   alt={project.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
+                  className="object-contain p-2 md:p-4"
+                  quality={90}
+                  priority={false}
                 />
-                <div className="absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 md:group-hover:opacity-100">
-                  <span className="text-white text-[10px] font-bold uppercase tracking-widest bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">
-                    Ampliar Imagem
-                  </span>
-                </div>
-              </>
-            ) : (
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs font-bold uppercase">
-                Sem Preview
-              </div>
-            )}
-          </div>
-        </DialogTrigger>
-        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border w-[95vw] sm:w-full">
-          <DialogHeader className="p-4 border-b border-border bg-card">
-            <DialogTitle className="text-sm md:text-lg font-bold uppercase tracking-tight">
-              {project.title}
-            </DialogTitle>
-          </DialogHeader>
-          <div className="relative aspect-[16/9] w-full bg-black/5">
-            {imageUrl && (
-              <Image
-                src={imageUrl}
-                alt={project.title}
-                fill
-                className="object-contain p-2 md:p-4"
-                quality={90}
-                priority={false}
-              />
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
+      ) : (
+        <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+          {imageUrl && (
+            <Image
+              src={imageUrl}
+              alt={project.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              loading="lazy"
+            />
+          )}
+        </div>
+      )}
       
       <div className="p-6 md:p-8 flex flex-col flex-1 gap-4">
         <h3 className="text-xl md:text-2xl font-bold tracking-tight">{project.title}</h3>
@@ -118,6 +133,12 @@ const ProjectCard = memo(({ project }: { project: typeof PROJECTS[0] }) => {
 ProjectCard.displayName = "ProjectCard";
 
 export default function Projects() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <section id="projects" className="py-20 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -132,7 +153,7 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {PROJECTS.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard key={project.id} project={project} mounted={mounted} />
           ))}
         </div>
       </div>

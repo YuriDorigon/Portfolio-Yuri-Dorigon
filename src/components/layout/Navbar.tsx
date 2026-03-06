@@ -16,8 +16,10 @@ import {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -62,35 +64,41 @@ export default function Navbar() {
 
         {/* Menu Mobile */}
         <div className="md:hidden">
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <button className="p-2 -mr-2 hover:text-accent transition-colors" aria-label="Abrir menu">
-                <Menu className="w-6 h-6" />
-              </button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[85%] bg-background border-l border-border flex flex-col p-8">
-              <SheetHeader className="text-left">
-                <SheetTitle className="text-xl font-bold tracking-tighter uppercase">Menu</SheetTitle>
-              </SheetHeader>
-              <nav className="flex flex-col gap-6 mt-12 flex-1">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="text-2xl font-bold uppercase tracking-tight hover:text-accent transition-colors border-b border-border/50 pb-4"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </nav>
-              <div className="pt-8 border-t border-border/50">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground leading-relaxed">
-                  Yuri Dorigon — <br />Desenvolvedor Front-End
-                </p>
-              </div>
-            </SheetContent>
-          </Sheet>
+          {mounted ? (
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+                <button className="p-2 -mr-2 hover:text-accent transition-colors" aria-label="Abrir menu">
+                  <Menu className="w-6 h-6" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[85%] bg-background border-l border-border flex flex-col p-8">
+                <SheetHeader className="text-left">
+                  <SheetTitle className="text-xl font-bold tracking-tighter uppercase">Menu</SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-6 mt-12 flex-1">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="text-2xl font-bold uppercase tracking-tight hover:text-accent transition-colors border-b border-border/50 pb-4"
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </nav>
+                <div className="pt-8 border-t border-border/50">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground leading-relaxed">
+                    Yuri Dorigon — <br />Desenvolvedor Front-End
+                  </p>
+                </div>
+              </SheetContent>
+            </Sheet>
+          ) : (
+            <button className="p-2 -mr-2 hover:text-accent transition-colors" aria-label="Abrir menu">
+              <Menu className="w-6 h-6" />
+            </button>
+          )}
         </div>
       </div>
     </nav>
