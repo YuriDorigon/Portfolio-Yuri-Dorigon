@@ -25,8 +25,8 @@ export default function Footer() {
             
             <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4">
               <a href="#projects" className="text-[10px] font-bold uppercase tracking-widest hover:text-accent transition-colors">Projetos</a>
+              <a href="#skills" className="text-[10px] font-bold uppercase tracking-widest hover:text-accent transition-colors">Habilidades</a>
               <a href="#about" className="text-[10px] font-bold uppercase tracking-widest hover:text-accent transition-colors">Sobre</a>
-              <a href="#skills" className="text-[10px] font-bold uppercase tracking-widest hover:text-accent transition-colors">Tecnologias</a>
               <a href="#contact" className="text-[10px] font-bold uppercase tracking-widest hover:text-accent transition-colors">Contato</a>
             </nav>
           </div>
