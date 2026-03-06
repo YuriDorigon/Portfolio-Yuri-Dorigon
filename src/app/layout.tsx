@@ -13,11 +13,9 @@ export const metadata: Metadata = {
   title: 'Yuri Dorigon | Desenvolvedor Front-End',
   description: 'Portfólio de Yuri Dorigon, desenvolvedor Front-End especializado em React, HTML, CSS e Next.js.',
   icons: {
-    icon: [
-      { url: '/vector.png', href: '/vector.png' },
-    ],
-    shortcut: '/vector.png',
-    apple: '/vector.png',
+    icon: '/vector.png?v=1',
+    shortcut: '/vector.png?v=1',
+    apple: '/vector.png?v=1',
   },
 };
 
