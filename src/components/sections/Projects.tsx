@@ -11,6 +11,7 @@ import {
   DialogHeader,
 } from "@/components/ui/dialog";
 
+// 💡 Altere os nomes, descrições e tecnologias aqui:
 const PROJECTS = [
   {
     id: "decodificador",

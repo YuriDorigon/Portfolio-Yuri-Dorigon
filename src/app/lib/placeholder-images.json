@@ -2,33 +2,33 @@
   "placeholderImages": [
     {
       "id": "profile-photo",
-      "description": "Sua foto de perfil profissional",
+      "description": "Foto de perfil profissional de Yuri",
       "imageUrl": "https://i.imgur.com/X1cPvzq.png",
-      "imageHint": "professional portrait"
+      "imageHint": "professional developer portrait"
     },
     {
       "id": "project-1",
-      "description": "Preview do projeto Decodificador de Dados",
-      "imageUrl": "https://picsum.photos/seed/yuri1/1200/800",
-      "imageHint": "data security encryption"
+      "description": "Website institucional desenvolvido para a Kennedy Promotora, apresentando serviços financeiros e informações da empresa com design moderno e responsivo.",
+      "imageUrl": "https://i.imgur.com/NWZZKZT.png",
+      "imageHint": "financial services company website"
     },
     {
       "id": "project-2",
-      "description": "Preview do projeto Clone de Interface de Navegador",
-      "imageUrl": "https://picsum.photos/seed/yuri2/1200/800",
-      "imageHint": "web browser interface"
+      "description": "Site institucional da Barbearia dos Artistas, com apresentação dos serviços, identidade visual moderna e layout adaptado para dispositivos móveis.",
+      "imageUrl": "https://i.imgur.com/msDe5fd.png",
+      "imageHint": "barbershop website modern design"
     },
     {
       "id": "project-3",
-      "description": "Preview do projeto Jogo da Memória Interativo",
-      "imageUrl": "https://picsum.photos/seed/yuri3/1200/800",
-      "imageHint": "memory game interaction"
+      "description": "Sistema web interno desenvolvido para a clínica Tagis para gerenciamento e controle da lista de retorno médico dos pacientes.",
+      "imageUrl": "https://i.imgur.com/SzMZHKP.png",
+      "imageHint": "medical clinic management system interface"
     },
     {
       "id": "project-4",
-      "description": "Preview do projeto Catálogo Responsivo de Produtos",
-      "imageUrl": "https://picsum.photos/seed/yuri4/1200/800",
-      "imageHint": "product catalog ecommerce"
+      "description": "Sistema web desenvolvido para geração e gestão de orçamentos de exames médicos da Clínica Tagis, facilitando o atendimento e organização interna.",
+      "imageUrl": "https://i.imgur.com/Ja6gfKf.png",
+      "imageHint": "medical exam budget system dashboard"
     }
   ]
 }
