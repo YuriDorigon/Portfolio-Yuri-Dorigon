@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -20,8 +20,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "O nome deve ter pelo menos 2 caracteres." }),
-  email: z.string().email({ message: "Por favor, insira um e-mail válido." }),
-  message: z.string().min(10, { message: "A mensagem deve ter pelo menos 10 caracteres." }),
+  message: z.string().min(5, { message: "A mensagem deve ter pelo menos 5 caracteres." }),
 });
 
 export default function Contact() {
@@ -30,17 +29,22 @@ export default function Contact() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      email: "",
       message: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const phoneNumber = "5548991136703";
+    const text = encodeURIComponent(`Olá Yuri! Meu nome é ${values.name}.\n\n${values.message}`);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+    
+    window.open(whatsappUrl, "_blank");
+    
     toast({
-      title: "Mensagem Enviada",
-      description: "Obrigado pelo contato! Responderei o mais rápido possível.",
+      title: "WhatsApp Aberto",
+      description: "Redirecionando para iniciar a conversa...",
     });
+    
     form.reset();
   }
 
@@ -113,19 +117,6 @@ export default function Contact() {
                   />
                   <FormField
                     control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="uppercase text-[10px] tracking-widest font-bold">E-mail</FormLabel>
-                        <FormControl>
-                          <Input placeholder="yuridorigon13@gmail.com" {...field} className="bg-transparent border-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-accent transition-all px-0 h-12 text-base" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
                     name="message"
                     render={({ field }) => (
                       <FormItem>
@@ -141,8 +132,8 @@ export default function Contact() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full bg-primary hover:bg-accent text-primary-foreground font-bold uppercase tracking-[0.2em] transition-all py-7 h-auto text-xs">
-                    Enviar Proposta
+                  <Button type="submit" className="w-full bg-primary hover:bg-accent text-primary-foreground font-bold uppercase tracking-[0.2em] transition-all py-7 h-auto text-xs gap-3">
+                    <MessageCircle className="w-4 h-4" /> Enviar Proposta via WhatsApp
                   </Button>
                 </form>
               </Form>
