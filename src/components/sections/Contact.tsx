@@ -62,7 +62,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="space-y-10 md:space-y-16">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 md:gap-8">
-                <a href="mailto:yuridorigon13@gmail.com" className="group flex items-center gap-5 hover:opacity-80 transition-opacity">
+                <a href="mailto:yuridorigon13@gmail.com?subject=Contato via Portfólio" className="group flex items-center gap-5 hover:opacity-80 transition-opacity">
                   <div className="p-4 bg-background rounded-full group-hover:bg-accent transition-colors shadow-sm">
                     <Mail className="w-5 h-5 group-hover:text-white" />
                   </div>
