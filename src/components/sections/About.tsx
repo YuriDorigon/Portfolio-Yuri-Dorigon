@@ -1,13 +1,9 @@
 
 "use client";
 
-import Image from "next/image";
 import { BookOpen, Laptop, GraduationCap } from "lucide-react";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function About() {
-  const profileImg = PlaceHolderImages.find(img => img.id === "profile-photo")?.imageUrl;
-
   const formation = [
     { school: "Alura", course: "Programa Oracle Next Education – Especialização Front-End", year: "2025", icon: <BookOpen className="w-4 h-4" /> },
     { school: "Curso em Vídeo", course: "HTML5 e CSS3", year: "2022", icon: <BookOpen className="w-4 h-4" /> }
@@ -19,22 +15,6 @@ export default function About() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
           <div className="lg:sticky lg:top-32 lg:w-1/3 space-y-8 w-full">
             <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-primary leading-none uppercase">Sobre <br />Mim</h2>
-            
-            <div className="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto lg:mx-0 aspect-square rounded-full overflow-hidden border-2 border-border shadow-md grayscale hover:grayscale-0 transition-all duration-500">
-              {profileImg ? (
-                <Image 
-                  src={profileImg} 
-                  alt="Yuri Dorigon - Perfil Profissional" 
-                  fill 
-                  sizes="(max-width: 768px) 280px, 320px"
-                  className="object-cover"
-                />
-              ) : (
-                <div className="w-full h-full bg-muted flex items-center justify-center text-[10px] uppercase font-bold tracking-widest text-muted-foreground">
-                  Foto Perfil
-                </div>
-              )}
-            </div>
           </div>
           
           <div className="lg:w-2/3 space-y-12">
