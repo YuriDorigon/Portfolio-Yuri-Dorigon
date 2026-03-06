@@ -1,5 +1,6 @@
 "use client";
 
+import React, { memo } from "react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +12,6 @@ import {
   DialogHeader,
 } from "@/components/ui/dialog";
 
-// 💡 Altere os nomes, descrições e tecnologias aqui:
 const PROJECTS = [
   {
     id: "kennedy-credit",
@@ -43,7 +43,8 @@ const PROJECTS = [
   }
 ];
 
-function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
+// Memoização do card para evitar re-renderizações durante o scroll
+const ProjectCard = memo(({ project }: { project: typeof PROJECTS[0] }) => {
   const imageUrl = PlaceHolderImages.find(img => img.id === project.imageKey)?.imageUrl;
 
   return (
@@ -59,6 +60,7 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 md:group-hover:opacity-100">
                   <span className="text-white text-[10px] font-bold uppercase tracking-widest bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">
@@ -86,8 +88,8 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
                 alt={project.title}
                 fill
                 className="object-contain p-2 md:p-4"
-                quality={100}
-                priority
+                quality={90}
+                priority={false}
               />
             )}
           </div>
@@ -111,7 +113,9 @@ function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
       </div>
     </div>
   );
-}
+});
+
+ProjectCard.displayName = "ProjectCard";
 
 export default function Projects() {
   return (
