@@ -8,27 +8,45 @@
     },
     {
       "id": "project-1",
-      "description": "Website institucional desenvolvido para a Kennedy Promotora, apresentando serviços financeiros e informações da empresa com design moderno e responsivo.",
-      "imageUrl": "https://i.imgur.com/NWZZKZT.png",
+      "description": "Website institucional desenvolvido para a Kennedy Promotora.",
+      "imageUrl": "/projects/kennedy-promotora.png",
       "imageHint": "financial services company website"
     },
     {
       "id": "project-2",
-      "description": "Site institucional da Barbearia dos Artistas, com apresentação dos serviços, identidade visual moderna e layout adaptado para dispositivos móveis.",
-      "imageUrl": "https://i.imgur.com/msDe5fd.png",
-      "imageHint": "barbershop website modern design"
+      "description": "Sistema web interno para gerenciamento e controle da lista de retorno médico dos pacientes.",
+      "imageUrl": "/projects/retorno-tagis.png",
+      "imageHint": "medical clinic patient return management system"
     },
     {
       "id": "project-3",
-      "description": "Sistema web interno desenvolvido para a clínica Tagis para gerenciamento e controle da lista de retorno médico dos pacientes.",
-      "imageUrl": "https://i.imgur.com/SzMZHKP.png",
-      "imageHint": "medical clinic management system interface"
+      "description": "Site institucional da Barbearia dos Artistas.",
+      "imageUrl": "/projects/barbearia-artistas.png",
+      "imageHint": "barbershop website modern design"
     },
     {
       "id": "project-4",
-      "description": "Sistema web desenvolvido para geração e gestão de orçamentos de exames médicos da Clínica Tagis, facilitando o atendimento e organização interna.",
-      "imageUrl": "https://i.imgur.com/Ja6gfKf.png",
+      "description": "Sistema web para geração e gestão de orçamentos de exames médicos da Clínica Tagis.",
+      "imageUrl": "/projects/orcamento-tagis.png",
       "imageHint": "medical exam budget system dashboard"
+    },
+    {
+      "id": "project-5",
+      "description": "Sistema web para geração e gerenciamento de escalas mensais de funcionários da Tagis.",
+      "imageUrl": "/projects/escala-tagis.png",
+      "imageHint": "employee scheduling system dashboard"
+    },
+    {
+      "id": "project-6",
+      "description": "Sistema de busca e consulta de histórico clínico de pacientes da Tagis.",
+      "imageUrl": "/projects/historico-tagis.png",
+      "imageHint": "patient history search system"
+    },
+    {
+      "id": "project-7",
+      "description": "API backend para disparo automático de confirmações de consultas via WhatsApp.",
+      "imageUrl": "",
+      "imageHint": "whatsapp automation api backend"
     }
   ]
 }

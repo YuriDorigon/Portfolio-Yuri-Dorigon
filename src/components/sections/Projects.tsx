@@ -3,8 +3,8 @@
 
 import React, { memo, useState, useEffect } from "react";
 import Image from "next/image";
+import { ExternalLink, Github } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
   DialogContent,
@@ -16,114 +16,196 @@ import {
 const PROJECTS = [
   {
     id: "kennedy-credit",
-    title: "Landing Page Financeira Premium - Kennedy Promotora",
-    description: "Site institucional de alta performance desenvolvido para a Kennedy Promotora. Possui design moderno em tons de preto e dourado, navegação com smooth scroll e integração direta com WhatsApp para conversão de clientes.",
+    title: "Landing Page Financeira Premium — Kennedy Promotora",
+    description: "Site institucional de alta performance desenvolvido para a Kennedy Promotora. Design moderno em tons de preto e dourado, com smooth scroll e integração direta com WhatsApp para conversão de clientes.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
-    imageKey: "project-1"
+    imageKey: "project-1",
+    type: "web",
+    demoUrl: "https://www.kennedypromotora.com.br",
+    githubUrl: "https://github.com/YuriDorigon/kennedy-promotora"
   },
   {
     id: "retorno-clinica-tagis",
     title: "Gerenciador de Retornos de Pacientes",
-    description: "Aplicação web para controle de retornos de pacientes em clínica médica, com cadastro, edição, busca global e controle de acesso por perfis.",
+    description: "Aplicação web para controle de retornos de pacientes em clínica médica, com cadastro, edição, busca global e controle de acesso por perfis de usuário.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ShadCN UI", "Firebase"],
-    imageKey: "project-2"
+    imageKey: "project-2",
+    type: "sistema",
+    demoUrl: "https://retornotagis.vercel.app",
+    githubUrl: "https://github.com/YuriDorigon/retornotagis"
   },
   {
     id: "barbearia-artistas",
     title: "Website Barbearia dos Artistas",
-    description: "Site institucional moderno desenvolvido para a Barbearia dos Artistas, focado em apresentação de serviços, identidade visual forte e experiência fluida para usuários em dispositivos móveis.",
+    description: "Site institucional moderno desenvolvido para a Barbearia dos Artistas, focado em apresentação de serviços, identidade visual forte e experiência fluida para dispositivos móveis.",
     tech: ["HTML", "CSS", "JavaScript"],
-    imageKey: "project-3"
+    imageKey: "project-3",
+    type: "web",
+    demoUrl: "https://barbearia-dos-artistas.vercel.app",
+    githubUrl: "https://github.com/YuriDorigon/BarberDosArtistasv2.0"
   },
   {
     id: "orcamentotagis",
-    title: "Orçamento Tagis - Sistema de Gestão",
+    title: "Orçamento Tagis — Sistema de Gestão",
     description: "Sistema interno para criação e gerenciamento de orçamentos laboratoriais com gestão de exames, relatórios e organização de dados de pacientes.",
     tech: ["Next.js", "TypeScript", "Zustand", "Firebase", "Tailwind CSS"],
-    imageKey: "project-4"
+    imageKey: "project-4",
+    type: "sistema",
+    demoUrl: "https://orcamento-tagis.vercel.app",
+    githubUrl: "https://github.com/YuriDorigon/orcamento-tagis"
+  },
+  {
+    id: "escala-tagis",
+    title: "Escala Tagis — Gestão de Escalas",
+    description: "Sistema web inteligente para geração e gerenciamento de escalas mensais de funcionários da Tagis. Conta com otimização por IA, gestão de templates e exportação de relatórios.",
+    tech: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS", "ShadCN UI", "Genkit AI"],
+    imageKey: "project-5",
+    type: "sistema",
+    demoUrl: "https://escala-tagis.vercel.app",
+    githubUrl: "https://github.com/YuriDorigon/escala-tagis"
+  },
+  {
+    id: "historico-tagis",
+    title: "Histórico de Pacientes Tagis",
+    description: "Sistema de busca e consulta de histórico clínico de pacientes. Permite localizar registros por nome, CPF ou data de nascimento com visualização detalhada do histórico de exames.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    imageKey: "project-6",
+    type: "sistema",
+    demoUrl: "https://historico-tagis.vercel.app",
+    githubUrl: "https://github.com/YuriDorigon/Historico-Tagis"
+  },
+  {
+    id: "confirmacao-automacao",
+    title: "API de Confirmação Automática via WhatsApp",
+    description: "Sistema backend para disparo automático de confirmações de consultas via WhatsApp. Integra com Supabase para gestão de agendamentos e mantém logs de envio com controle de status por paciente.",
+    tech: ["Node.js", "Express", "Supabase", "SQLite", "WhatsApp API"],
+    imageKey: "project-7",
+    type: "api",
+    demoUrl: "https://confimacao-automacao.vercel.app",
+    githubUrl: "https://github.com/YuriDorigon/confimacao-automacao"
   }
 ];
 
-const ProjectCard = memo(({ project, mounted }: { project: typeof PROJECTS[0], mounted: boolean }) => {
-  const imageUrl = PlaceHolderImages.find(img => img.id === project.imageKey)?.imageUrl;
+const TYPE_LABELS: Record<string, string> = {
+  web: "Site",
+  sistema: "Sistema",
+  api: "API / Backend",
+};
+
+const TYPE_COLORS: Record<string, string> = {
+  web: "text-accent border-accent/40 bg-accent/5",
+  sistema: "text-primary border-primary/20 bg-primary/5",
+  api: "text-muted-foreground border-border bg-secondary",
+};
+
+const ProjectCard = memo(({ project, index, mounted }: { project: typeof PROJECTS[0]; index: number; mounted: boolean }) => {
+  const imageUrl = PlaceHolderImages.find(img => img.id === project.imageKey)?.imageUrl || "";
+
+  const ImagePreview = (
+    <div className="relative aspect-[16/9] overflow-hidden bg-secondary">
+      {imageUrl ? (
+        <Image
+          src={imageUrl}
+          alt={project.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          loading="lazy"
+        />
+      ) : (
+        <div className="w-full h-full flex flex-col items-center justify-center gap-2 bg-secondary">
+          <span className="text-5xl font-black text-foreground/[0.04] uppercase tracking-widest">
+            {TYPE_LABELS[project.type] ?? "Preview"}
+          </span>
+          <span className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/30">
+            Screenshot em breve
+          </span>
+        </div>
+      )}
+    </div>
+  );
 
   return (
-    <div className="flex flex-col group border border-border rounded-md overflow-hidden bg-card transition-all hover:shadow-lg">
-      {mounted ? (
+    <div className="flex flex-col group border border-border bg-card transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 overflow-hidden">
+      {/* Top accent line */}
+      <div className="h-px w-full bg-gradient-to-r from-accent/60 via-accent/20 to-transparent" />
+
+      {mounted && imageUrl ? (
         <Dialog>
           <DialogTrigger asChild>
-            <div className="relative aspect-[16/9] overflow-hidden bg-muted cursor-zoom-in">
-              {imageUrl ? (
-                <>
-                  <Image
-                    src={imageUrl}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 md:group-hover:opacity-100">
-                    <span className="text-white text-[10px] font-bold uppercase tracking-widest bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">
-                      Ampliar Imagem
-                    </span>
-                  </div>
-                </>
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs font-bold uppercase">
-                  Sem Preview
-                </div>
-              )}
+            <div className="cursor-zoom-in relative overflow-hidden">
+              {ImagePreview}
+              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                <span className="text-background text-[9px] font-bold uppercase tracking-widest bg-foreground/80 px-4 py-2 backdrop-blur-sm">
+                  Ampliar
+                </span>
+              </div>
             </div>
           </DialogTrigger>
           <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border w-[95vw] sm:w-full">
             <DialogHeader className="p-4 border-b border-border bg-card">
-              <DialogTitle className="text-sm md:text-lg font-bold uppercase tracking-tight">
+              <DialogTitle className="text-sm md:text-base font-bold uppercase tracking-tight">
                 {project.title}
               </DialogTitle>
             </DialogHeader>
-            <div className="relative aspect-[16/9] w-full bg-black/5">
-              {imageUrl && (
-                <Image
-                  src={imageUrl}
-                  alt={project.title}
-                  fill
-                  className="object-contain p-2 md:p-4"
-                  quality={90}
-                  priority={false}
-                />
-              )}
+            <div className="relative aspect-[16/9] w-full bg-secondary/50">
+              <Image src={imageUrl} alt={project.title} fill className="object-contain p-2 md:p-4" quality={90} />
             </div>
           </DialogContent>
         </Dialog>
       ) : (
-        <div className="relative aspect-[16/9] overflow-hidden bg-muted">
-          {imageUrl && (
-            <Image
-              src={imageUrl}
-              alt={project.title}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-              loading="lazy"
-            />
+        ImagePreview
+      )}
+
+      <div className="p-6 md:p-7 flex flex-col flex-1 gap-4">
+        <div className="flex items-start justify-between gap-3">
+          <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-muted-foreground/60 section-number">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          {project.type && (
+            <span className={`text-[8px] font-bold uppercase tracking-widest border px-2 py-0.5 ${TYPE_COLORS[project.type]}`}>
+              {TYPE_LABELS[project.type] ?? project.type}
+            </span>
           )}
         </div>
-      )}
-      
-      <div className="p-6 md:p-8 flex flex-col flex-1 gap-4">
-        <h3 className="text-xl md:text-2xl font-bold tracking-tight">{project.title}</h3>
-        
+
+        <h3 className="text-base md:text-lg font-bold tracking-tight leading-snug">{project.title}</h3>
+
         <p className="text-muted-foreground leading-relaxed flex-1 text-sm">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 pt-2">
+        <div className="flex flex-wrap gap-1.5 pt-1">
           {project.tech.map(t => (
-            <Badge key={t} variant="secondary" className="font-mono text-[9px] md:text-[10px] uppercase px-2 py-0.5">
+            <span key={t} className="font-mono text-[9px] font-bold uppercase tracking-widest bg-secondary text-muted-foreground px-2 py-0.5 border border-border/50">
               {t}
-            </Badge>
+            </span>
           ))}
+        </div>
+
+        <div className="flex items-center gap-4 pt-4 border-t border-border/40">
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-widest text-foreground hover:text-accent transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              Demo
+            </a>
+          )}
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors ml-auto"
+            >
+              <Github className="w-3 h-3" />
+              Código
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -134,26 +216,25 @@ ProjectCard.displayName = "ProjectCard";
 
 export default function Projects() {
   const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  useEffect(() => { setMounted(true); }, []);
 
   return (
-    <section id="projects" className="py-20 md:py-24 bg-background">
+    <section id="projects" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-baseline mb-12 md:mb-16 gap-4">
-          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-primary uppercase">
+        <div className="flex flex-col md:flex-row justify-between items-baseline mb-14 md:mb-20 gap-4 border-b border-border pb-8">
+          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-foreground">
             Projetos
           </h2>
-          <p className="text-muted-foreground uppercase tracking-widest text-[10px] md:text-xs font-bold">
-            Portfólio de Soluções Técnicas ({PROJECTS.length})
+          <p className="text-muted-foreground uppercase tracking-[0.2em] text-[9px] md:text-[10px] font-bold">
+            {PROJECTS.length} projetos selecionados
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {PROJECTS.map((project) => (
-            <ProjectCard key={project.id} project={project} mounted={mounted} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+          {PROJECTS.map((project, i) => (
+            <div key={project.id} className="bg-background">
+              <ProjectCard project={project} index={i} mounted={mounted} />
+            </div>
           ))}
         </div>
       </div>
