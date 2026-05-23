@@ -24,17 +24,17 @@ export default function About() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
           <div className="lg:w-2/5 space-y-6">
             <p className="text-xl md:text-2xl leading-snug font-medium text-foreground">
-              Desenvolvedor front-end focado na criação de interfaces modernas e aplicações web com React, JavaScript, HTML e CSS.
+              Desenvolvedor Full-Stack com sistemas reais rodando em produção — frontend moderno, automações backend e integrações com IA.
             </p>
             <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
               <p>
-                Atualmente trabalho na área da saúde atuando como recepcionista e suporte de TI em uma clínica médica, onde desenvolvi forte capacidade de organização, comunicação e resolução de problemas.
+                Trabalho na Tagis Medicina & Diagnóstico onde, além do suporte de TI, sou o responsável por desenvolver e manter todos os sistemas internos da clínica — 7+ aplicações em produção usadas diariamente pela equipe.
               </p>
               <p>
-                Paralelamente, venho construindo minha carreira em tecnologia através de estudos constantes e desenvolvimento de projetos práticos utilizando tecnologias modernas como React e Next.js.
+                Construo desde sites institucionais e dashboards React até bots de automação em Node.js, integração com APIs de WhatsApp Business (Meta), OCR com Google Gemini Vision e geração de escalas com IA.
               </p>
               <p>
-                Busco minha primeira oportunidade profissional como desenvolvedor para contribuir com soluções digitais eficientes enquanto continuo evoluindo tecnicamente.
+                Especialista em vibe coding com Claude — desenvolvo soluções completas de forma acelerada, entregando código de produção com alta qualidade e velocidade.
               </p>
             </div>
           </div>
@@ -47,15 +47,17 @@ export default function About() {
                 Experiência Profissional
               </h4>
               <div className="border-l border-border pl-6 space-y-3">
-                <p className="font-bold text-foreground text-lg leading-tight">Recepcionista / Suporte de TI</p>
+                <p className="font-bold text-foreground text-lg leading-tight">Assistente de Direção & Desenvolvedor de Sistemas</p>
                 <p className="text-sm font-bold text-accent">Tagis Medicina & Diagnóstico</p>
                 <p className="text-[9px] text-muted-foreground uppercase tracking-widest font-bold">2023 — Presente</p>
                 <ul className="mt-4 space-y-2.5">
                   {[
-                    "Atendimento e suporte direto a pacientes e equipe médica",
-                    "Organização de agendas e processos internos",
-                    "Suporte técnico básico em computadores e rede",
-                    "Auxílio na resolução de problemas de sistemas internos"
+                    "Desenvolvimento e manutenção de 7+ sistemas internos em produção",
+                    "Bot de confirmação de agendamentos via WhatsApp com Meta Business API, templates aprovados e integração NetRIS",
+                    "Sistema de orçamentos laboratoriais com OCR por IA (Google Gemini Vision) para leitura de pedidos médicos",
+                    "Emissão automática de notas fiscais via app Electron com scraping e API REST",
+                    "Gestão de escalas com geração automática via IA (Google Genkit + Gemini)",
+                    "Site institucional Next.js em produção (tagismd.com.br) com painel admin e Firebase"
                   ].map((item, i) => (
                     <li key={i} className="text-sm text-muted-foreground flex gap-3">
                       <span className="text-accent shrink-0 mt-0.5 font-bold">—</span>
@@ -89,7 +91,7 @@ export default function About() {
                     Diferencial
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Experiência prática com desenvolvimento web, foco em código limpo, interfaces responsivas e boas práticas. Interesse contínuo em evolução técnica no ecossistema JavaScript.
+                    Especialista em vibe coding com Claude AI — entrego sistemas completos, do banco de dados ao frontend, com velocidade e qualidade de produção. Todos os projetos do portfólio estão ativos e em uso real.
                   </p>
                 </div>
               </div>

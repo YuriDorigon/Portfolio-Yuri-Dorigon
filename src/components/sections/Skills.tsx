@@ -29,33 +29,37 @@ function SkillRow({ name, level }: { name: string; level: number }) {
 export default function Skills() {
   const skillGroups = [
     {
-      title: "Frontend Principal",
+      title: "Frontend",
       skills: [
         { name: "HTML5 & CSS3", level: 5 },
         { name: "JavaScript", level: 5 },
         { name: "React", level: 4 },
         { name: "Next.js", level: 4 },
         { name: "TypeScript", level: 3 },
-      ]
-    },
-    {
-      title: "Ecossistema",
-      skills: [
         { name: "Tailwind CSS", level: 5 },
         { name: "ShadCN UI", level: 4 },
-        { name: "Responsive Design", level: 5 },
-        { name: "Zustand", level: 3 },
-        { name: "React Hook Form", level: 3 },
       ]
     },
     {
-      title: "Ferramentas & Backend",
+      title: "Backend & Banco",
       skills: [
-        { name: "Git & GitHub", level: 4 },
+        { name: "Node.js", level: 4 },
+        { name: "Express.js", level: 4 },
         { name: "Firebase", level: 4 },
-        { name: "Supabase", level: 3 },
-        { name: "Node.js", level: 3 },
-        { name: "Figma", level: 3 },
+        { name: "Supabase", level: 4 },
+        { name: "PostgreSQL", level: 3 },
+        { name: "Git & GitHub", level: 4 },
+        { name: "Vercel / Railway", level: 4 },
+      ]
+    },
+    {
+      title: "IA & Automação",
+      skills: [
+        { name: "Claude AI (Vibe Coding)", level: 5 },
+        { name: "Google Gemini / Genkit", level: 4 },
+        { name: "Meta WhatsApp API", level: 4 },
+        { name: "Electron", level: 3 },
+        { name: "Playwright", level: 3 },
       ]
     }
   ];
@@ -91,10 +95,10 @@ export default function Skills() {
 
           <div className="mt-16 md:mt-20 border-l-2 border-accent pl-8 space-y-4">
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground italic font-display">
-              "Foco em escrever código limpo e interfaces que resolvem problemas reais de negócio, unindo a robustez do React com a simplicidade do HTML e CSS bem estruturados."
+              "Construo sistemas completos — do banco de dados ao frontend — que resolvem problemas reais e rodam em produção todo dia."
             </p>
             <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
-              Também utilizo ferramentas de inteligência artificial para acelerar desenvolvimento, prototipação e resolução de problemas, mantendo sempre foco na qualidade e entendimento do código.
+              Especialista em vibe coding com Claude AI: desenvolvo com velocidade e qualidade de produção, entregando integrações complexas (WhatsApp, IA, ERPs) sem abrir mão de código limpo e bem estruturado.
             </p>
           </div>
         </div>

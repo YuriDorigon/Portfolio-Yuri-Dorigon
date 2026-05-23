@@ -32,16 +32,16 @@ export default function Hero() {
           <div className="flex items-center gap-4 justify-center lg:justify-start my-6">
             <div className="h-px flex-1 max-w-[80px] bg-border" />
             <p className="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-muted-foreground">
-              Front-End Developer
+              Full-Stack Developer
             </p>
           </div>
 
           <p className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-accent uppercase mb-8">
-            React · JavaScript · HTML · CSS · Next.js
+            React · Next.js · Node.js · TypeScript · IA
           </p>
 
           <p className="max-w-lg text-sm md:text-base text-muted-foreground leading-relaxed mb-10 mx-auto lg:mx-0">
-            Desenvolvedor Front-End focado na criação de interfaces modernas e aplicações web. Experiência com React, Next.js e TypeScript, sempre evoluindo no ecossistema JavaScript.
+            Desenvolvedor Full-Stack com sistemas reais em produção — do frontend moderno em React/Next.js a backends Node.js com automações, integrações de IA e APIs como WhatsApp Business e NetRIS.
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-12">
