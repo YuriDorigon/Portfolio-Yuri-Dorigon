@@ -20,7 +20,7 @@ export default function Footer() {
               Yuri Dorigon<span className="text-accent not-italic">.</span>
             </Link>
             <p className="text-[9px] text-muted-foreground/60 uppercase tracking-[0.2em] font-bold">
-              © {year ?? 2025} — Desenvolvedor Front-End
+              © {year ?? 2026} — Full-Stack Developer
             </p>
           </div>
 

@@ -69,7 +69,7 @@ export default function Hero() {
             </div>
             <div>
               <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Atuação Atual</span>
-              <span className="text-sm font-bold uppercase tracking-tight">Suporte de TI</span>
+              <span className="text-sm font-bold uppercase tracking-tight">Assistente de Direção</span>
             </div>
           </div>
         </div>
