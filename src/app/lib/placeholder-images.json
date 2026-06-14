@@ -45,8 +45,8 @@
     {
       "id": "project-7",
       "description": "API backend para disparo automático de confirmações de consultas via WhatsApp.",
-      "imageUrl": "",
-      "imageHint": "whatsapp automation api backend"
+      "imageUrl": "/projects/confirmacao-dashboard.png",
+      "imageHint": "whatsapp automation api backend dashboard"
     }
   ]
 }

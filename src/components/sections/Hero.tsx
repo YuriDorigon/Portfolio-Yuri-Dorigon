@@ -56,7 +56,7 @@ export default function Hero() {
               </a>
             </Button>
             <Button variant="ghost" asChild className="gap-2 font-bold uppercase tracking-widest text-[9px] md:text-[10px] h-11 px-6 hover:text-accent">
-              <a href="mailto:yuridorigon13@gmail.com?subject=Contato via Portfólio">
+              <a href="mailto:yuridorigon12@gmail.com?subject=Contato via Portfólio">
                 <Mail className="w-3.5 h-3.5" /> Contato
               </a>
             </Button>
@@ -69,7 +69,7 @@ export default function Hero() {
             </div>
             <div>
               <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Atuação Atual</span>
-              <span className="text-sm font-bold uppercase tracking-tight">Assistente de Direção</span>
+              <span className="text-sm font-bold uppercase tracking-tight">Dev Full-Stack</span>
             </div>
           </div>
         </div>

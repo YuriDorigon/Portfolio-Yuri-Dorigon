@@ -3,7 +3,6 @@
 
 import React, { memo, useState, useEffect } from "react";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
   Dialog,
@@ -15,34 +14,12 @@ import {
 
 const PROJECTS = [
   {
-    id: "kennedy-credit",
-    title: "Landing Page Financeira Premium — Kennedy Promotora",
-    description: "Site institucional de alta performance desenvolvido para a Kennedy Promotora. Design moderno em tons de preto e dourado, com smooth scroll e integração direta com WhatsApp para conversão de clientes.",
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
-    imageKey: "project-1",
-    type: "web",
-    demoUrl: "https://www.kennedypromotora.com.br",
-    githubUrl: "https://github.com/YuriDorigon/kennedy-promotora"
-  },
-  {
-    id: "retorno-clinica-tagis",
-    title: "Gerenciador de Retornos de Pacientes",
-    description: "Aplicação web para controle de retornos de pacientes em clínica médica, com cadastro, edição, busca global e controle de acesso por perfis de usuário.",
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ShadCN UI", "Firebase"],
-    imageKey: "project-2",
-    type: "sistema",
-    demoUrl: "https://retornotagis.vercel.app",
-    githubUrl: "https://github.com/YuriDorigon/retornotagis"
-  },
-  {
-    id: "barbearia-artistas",
-    title: "Website Barbearia dos Artistas",
-    description: "Site institucional moderno desenvolvido para a Barbearia dos Artistas, focado em apresentação de serviços, identidade visual forte e experiência fluida para dispositivos móveis.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    imageKey: "project-3",
-    type: "web",
-    demoUrl: "https://barbearia-dos-artistas.vercel.app",
-    githubUrl: "https://github.com/YuriDorigon/BarberDosArtistasv2.0"
+    id: "confirmacao-automacao",
+    title: "Bot de Confirmação de Agendamentos via WhatsApp",
+    description: "Sistema backend completo em produção: dispara confirmações de consultas via Meta WhatsApp Business API com templates aprovados, processa respostas via webhook, confirma/cancela no sistema NetRIS, envia alertas no Slack e gerencia toda a lógica de janelas de silêncio, reenvios e lembretes.",
+    tech: ["Node.js", "Express", "Meta WhatsApp API", "Supabase", "Railway", "Slack API"],
+    imageKey: "project-7",
+    type: "api",
   },
   {
     id: "orcamentotagis",
@@ -51,8 +28,6 @@ const PROJECTS = [
     tech: ["Next.js", "TypeScript", "Zustand", "Firebase", "Google Gemini", "Tailwind CSS"],
     imageKey: "project-4",
     type: "sistema",
-    demoUrl: "https://orcamento-tagis.vercel.app",
-    githubUrl: "https://github.com/YuriDorigon/orcamento-tagis"
   },
   {
     id: "escala-tagis",
@@ -61,8 +36,22 @@ const PROJECTS = [
     tech: ["Next.js", "TypeScript", "Firebase", "Google Genkit", "Gemini AI", "ShadCN UI"],
     imageKey: "project-5",
     type: "sistema",
-    demoUrl: "https://escala-tagis.vercel.app",
-    githubUrl: "https://github.com/YuriDorigon/escala-tagis"
+  },
+  {
+    id: "kennedy-credit",
+    title: "Landing Page Financeira Premium — Kennedy Promotora",
+    description: "Site institucional de alta performance desenvolvido para a Kennedy Promotora. Design moderno em tons de preto e dourado, com smooth scroll e integração direta com WhatsApp para conversão de clientes.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
+    imageKey: "project-1",
+    type: "web",
+  },
+  {
+    id: "retorno-clinica-tagis",
+    title: "Gerenciador de Retornos de Pacientes",
+    description: "Aplicação web para controle de retornos de pacientes em clínica médica, com cadastro, edição, busca global e controle de acesso por perfis de usuário.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ShadCN UI", "Firebase"],
+    imageKey: "project-2",
+    type: "sistema",
   },
   {
     id: "historico-tagis",
@@ -71,19 +60,15 @@ const PROJECTS = [
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "Tailwind CSS"],
     imageKey: "project-6",
     type: "sistema",
-    demoUrl: "https://historico-tagis.vercel.app",
-    githubUrl: "https://github.com/YuriDorigon/Historico-Tagis"
   },
   {
-    id: "confirmacao-automacao",
-    title: "Bot de Confirmação de Agendamentos via WhatsApp",
-    description: "Sistema backend completo em produção: dispara confirmações de consultas via Meta WhatsApp Business API com templates aprovados, processa respostas via webhook, confirma/cancela no sistema NetRIS, envia alertas no Slack e gerencia toda a lógica de janelas de silêncio, reenvios e lembretes.",
-    tech: ["Node.js", "Express", "Meta WhatsApp API", "Supabase", "Railway", "Slack API"],
-    imageKey: "project-7",
-    type: "api",
-    demoUrl: "https://confimacao-automacao.vercel.app",
-    githubUrl: "https://github.com/YuriDorigon/confimacao-automacao"
-  }
+    id: "barbearia-artistas",
+    title: "Website Barbearia dos Artistas",
+    description: "Site institucional moderno desenvolvido para a Barbearia dos Artistas, focado em apresentação de serviços, identidade visual forte e experiência fluida para dispositivos móveis.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    imageKey: "project-3",
+    type: "web",
+  },
 ];
 
 const TYPE_LABELS: Record<string, string> = {
@@ -183,30 +168,6 @@ const ProjectCard = memo(({ project, index, mounted }: { project: typeof PROJECT
           ))}
         </div>
 
-        <div className="flex items-center gap-4 pt-4 border-t border-border/40">
-          {project.demoUrl && (
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-widest text-foreground hover:text-accent transition-colors"
-            >
-              <ExternalLink className="w-3 h-3" />
-              Demo
-            </a>
-          )}
-          {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors ml-auto"
-            >
-              <Github className="w-3 h-3" />
-              Código
-            </a>
-          )}
-        </div>
       </div>
     </div>
   );
