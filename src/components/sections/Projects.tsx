@@ -69,6 +69,14 @@ const PROJECTS = [
     imageKey: "project-3",
     type: "web",
   },
+  {
+    id: "site-tagis-medicina",
+    title: "Site Institucional — Tagis Medicina Diagnóstica",
+    description: "Site institucional da Tagis Medicina Diagnóstica, clínica de exames laboratoriais e de imagem. Apresentação de serviços, unidades, convênios e canais de contato.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    imageKey: "project-8",
+    type: "web",
+  },
 ];
 
 const TYPE_LABELS: Record<string, string> = {
@@ -78,23 +86,23 @@ const TYPE_LABELS: Record<string, string> = {
 };
 
 const TYPE_COLORS: Record<string, string> = {
-  web: "text-accent border-accent/40 bg-accent/5",
-  sistema: "text-primary border-primary/20 bg-primary/5",
-  api: "text-muted-foreground border-border bg-secondary",
+  web: "text-accent border-accent/40 bg-accent/10",
+  sistema: "text-emerald-300 border-emerald-400/30 bg-emerald-400/10",
+  api: "text-sky-300 border-sky-400/30 bg-sky-400/10",
 };
 
 const ProjectCard = memo(({ project, index, mounted }: { project: typeof PROJECTS[0]; index: number; mounted: boolean }) => {
   const imageUrl = PlaceHolderImages.find(img => img.id === project.imageKey)?.imageUrl || "";
 
   const ImagePreview = (
-    <div className="relative aspect-[16/9] overflow-hidden bg-secondary">
+    <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-secondary">
       {imageUrl ? (
         <Image
           src={imageUrl}
           alt={project.title}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
       ) : (
@@ -111,29 +119,26 @@ const ProjectCard = memo(({ project, index, mounted }: { project: typeof PROJECT
   );
 
   return (
-    <div className="flex flex-col group border border-border bg-card transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 overflow-hidden">
-      {/* Top accent line */}
-      <div className="h-px w-full bg-gradient-to-r from-accent/60 via-accent/20 to-transparent" />
-
+    <div className="glass-card flex flex-col group rounded-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden p-2.5">
       {mounted && imageUrl ? (
         <Dialog>
           <DialogTrigger asChild>
-            <div className="cursor-zoom-in relative overflow-hidden">
+            <div className="cursor-zoom-in relative overflow-hidden rounded-xl">
               {ImagePreview}
-              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                <span className="text-background text-[9px] font-bold uppercase tracking-widest bg-foreground/80 px-4 py-2 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/30 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 rounded-xl">
+                <span className="text-accent-foreground text-[9px] font-bold uppercase tracking-widest bg-accent px-4 py-2 rounded-full backdrop-blur-sm">
                   Ampliar
                 </span>
               </div>
             </div>
           </DialogTrigger>
-          <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border w-[95vw] sm:w-full">
-            <DialogHeader className="p-4 border-b border-border bg-card">
-              <DialogTitle className="text-sm md:text-base font-bold uppercase tracking-tight">
+          <DialogContent className="max-w-4xl p-0 overflow-hidden glass-card rounded-2xl w-[95vw] sm:w-full">
+            <DialogHeader className="p-4 border-b border-border/60">
+              <DialogTitle className="text-sm md:text-base font-bold tracking-tight">
                 {project.title}
               </DialogTitle>
             </DialogHeader>
-            <div className="relative aspect-[16/9] w-full bg-secondary/50">
+            <div className="relative aspect-[16/9] w-full bg-secondary/40">
               <Image src={imageUrl} alt={project.title} fill className="object-contain p-2 md:p-4" quality={90} />
             </div>
           </DialogContent>
@@ -142,19 +147,19 @@ const ProjectCard = memo(({ project, index, mounted }: { project: typeof PROJECT
         ImagePreview
       )}
 
-      <div className="p-6 md:p-7 flex flex-col flex-1 gap-4">
+      <div className="p-5 md:p-6 flex flex-col flex-1 gap-4">
         <div className="flex items-start justify-between gap-3">
-          <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-muted-foreground/60 section-number">
+          <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-accent/70 section-number">
             {String(index + 1).padStart(2, "0")}
           </span>
           {project.type && (
-            <span className={`text-[8px] font-bold uppercase tracking-widest border px-2 py-0.5 ${TYPE_COLORS[project.type]}`}>
+            <span className={`text-[8px] font-bold uppercase tracking-widest rounded-full border px-2.5 py-0.5 ${TYPE_COLORS[project.type]}`}>
               {TYPE_LABELS[project.type] ?? project.type}
             </span>
           )}
         </div>
 
-        <h3 className="text-base md:text-lg font-bold tracking-tight leading-snug">{project.title}</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight leading-snug group-hover:text-accent transition-colors duration-300">{project.title}</h3>
 
         <p className="text-muted-foreground leading-relaxed flex-1 text-sm">
           {project.description}
@@ -162,7 +167,7 @@ const ProjectCard = memo(({ project, index, mounted }: { project: typeof PROJECT
 
         <div className="flex flex-wrap gap-1.5 pt-1">
           {project.tech.map(t => (
-            <span key={t} className="font-mono text-[9px] font-bold uppercase tracking-widest bg-secondary text-muted-foreground px-2 py-0.5 border border-border/50">
+            <span key={t} className="font-mono text-[9px] font-bold uppercase tracking-widest rounded-full bg-accent/5 text-accent/90 px-2.5 py-1 border border-accent/20">
               {t}
             </span>
           ))}
@@ -180,22 +185,21 @@ export default function Projects() {
   useEffect(() => { setMounted(true); }, []);
 
   return (
-    <section id="projects" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="projects" className="relative py-20 md:py-28 bg-background overflow-hidden">
+      <div className="absolute top-0 left-1/4 w-[40rem] h-[40rem] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="relative container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-14 md:mb-20 gap-4 border-b border-border pb-8">
-          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-foreground">
+          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-gradient">
             Projetos
           </h2>
-          <p className="text-muted-foreground uppercase tracking-[0.2em] text-[9px] md:text-[10px] font-bold">
+          <p className="text-accent/80 uppercase tracking-[0.2em] text-[9px] md:text-[10px] font-bold">
             {PROJECTS.length} projetos selecionados
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {PROJECTS.map((project, i) => (
-            <div key={project.id} className="bg-background">
-              <ProjectCard project={project} index={i} mounted={mounted} />
-            </div>
+            <ProjectCard key={project.id} project={project} index={i} mounted={mounted} />
           ))}
         </div>
       </div>

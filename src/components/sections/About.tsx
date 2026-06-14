@@ -13,7 +13,7 @@ export default function About() {
     <section id="about" className="py-20 md:py-28 bg-background border-t border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-14 md:mb-20 gap-4 border-b border-border pb-8">
-          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-foreground">
+          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-gradient">
             Sobre Mim
           </h2>
           <p className="text-muted-foreground uppercase tracking-[0.2em] text-[9px] md:text-[10px] font-bold">
@@ -46,7 +46,7 @@ export default function About() {
                 <span className="w-4 h-px bg-accent" />
                 Experiência Profissional
               </h4>
-              <div className="border-l border-border pl-6 space-y-3">
+              <div className="border-l-2 border-accent/40 pl-6 space-y-3">
                 <p className="font-bold text-foreground text-lg leading-tight">Assistente de Direção & Desenvolvedor de Sistemas</p>
                 <p className="text-sm font-bold text-accent">Tagis Medicina & Diagnóstico</p>
                 <p className="text-[9px] text-muted-foreground uppercase tracking-widest font-bold">2023 — Presente</p>
@@ -76,7 +76,7 @@ export default function About() {
               </h4>
               <div className="space-y-6">
                 {formation.map((f, i) => (
-                  <div key={i} className="border-l border-border pl-6 space-y-1.5">
+                  <div key={i} className="border-l-2 border-accent/40 pl-6 space-y-1.5">
                     <p className="font-bold text-foreground text-base leading-tight">{f.course}</p>
                     <div className="flex items-center justify-between text-sm text-muted-foreground gap-2">
                       <span className="font-medium">{f.school}</span>
@@ -85,7 +85,7 @@ export default function About() {
                   </div>
                 ))}
 
-                <div className="mt-4 p-5 bg-secondary border border-border/60">
+                <div className="mt-4 p-5 glass-card rounded-2xl">
                   <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-accent mb-2 flex items-center gap-2">
                     <span className="w-3 h-px bg-accent" />
                     Diferencial

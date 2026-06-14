@@ -47,6 +47,12 @@
       "description": "API backend para disparo automático de confirmações de consultas via WhatsApp.",
       "imageUrl": "/projects/confirmacao-dashboard.png",
       "imageHint": "whatsapp automation api backend dashboard"
+    },
+    {
+      "id": "project-8",
+      "description": "Site institucional da Tagis Medicina Diagnóstica.",
+      "imageUrl": "/projects/site-tagis-medicina.png",
+      "imageHint": "medical clinic institutional website"
     }
   ]
 }

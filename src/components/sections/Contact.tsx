@@ -48,7 +48,7 @@ export default function Contact() {
     <section id="contact" className="py-20 md:py-28 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-14 md:mb-20 gap-4 border-b border-border pb-8">
-          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-foreground">
+          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-gradient">
             Contato
           </h2>
           <p className="text-muted-foreground uppercase tracking-[0.2em] text-[9px] md:text-[10px] font-bold">
@@ -69,9 +69,9 @@ export default function Contact() {
                   href={href}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="group flex items-center gap-5 py-4 border-b border-border/50 hover:border-accent/50 transition-colors"
+                  className="group flex items-center gap-5 py-4 border-b border-border/50 hover:border-accent/50 transition-all duration-300"
                 >
-                  <div className="p-2.5 bg-background border border-border group-hover:border-accent group-hover:bg-accent transition-colors">
+                  <div className="p-2.5 rounded-xl bg-card border border-border group-hover:border-accent group-hover:bg-accent transition-all duration-300">
                     <Icon className="w-4 h-4 group-hover:text-accent-foreground transition-colors" />
                   </div>
                   <div>
@@ -94,7 +94,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-background border border-border p-6 md:p-10">
+          <div className="glass-card rounded-2xl p-6 md:p-10">
             <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-accent mb-6 flex items-center gap-2">
               <span className="w-3 h-px bg-accent" />
               Enviar mensagem
@@ -131,7 +131,7 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full bg-foreground hover:bg-accent text-background font-bold uppercase tracking-[0.2em] h-12 text-[9px] gap-2 rounded-none">
+                <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-[0.2em] h-12 text-[9px] gap-2 rounded-xl transition-all duration-300 shadow-[0_8px_30px_-8px_hsla(188,95%,52%,0.6)] hover:shadow-[0_8px_40px_-6px_hsla(188,95%,52%,0.8)]">
                   <MessageCircle className="w-3.5 h-3.5" />
                   Enviar via WhatsApp
                 </Button>

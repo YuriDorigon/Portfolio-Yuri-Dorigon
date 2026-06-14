@@ -10,23 +10,20 @@ export default function Hero() {
   const profileImg = PlaceHolderImages.find(img => img.id === "profile-photo")?.imageUrl;
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-4 md:px-6 pt-24 pb-16 overflow-hidden bg-background">
+    <section className="relative min-h-screen flex flex-col justify-center px-4 md:px-6 pt-24 pb-16 overflow-hidden mesh-bg">
+      {/* Animated grid overlay for depth */}
+      <div className="absolute inset-0 grid-overlay pointer-events-none" />
       {/* Subtle vertical rule decoration */}
       <div className="absolute left-6 top-1/4 bottom-1/4 w-px bg-border/60 hidden lg:block" />
 
-      <div className="max-w-6xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+      <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
 
         {/* Text */}
         <div className="flex-1 text-center lg:text-left animate-fade-in [animation-delay:150ms] opacity-0">
 
-          <p className="text-accent font-bold tracking-[0.25em] uppercase text-[9px] md:text-[10px] mb-5 flex items-center gap-3 justify-center lg:justify-start">
-            <span className="w-6 h-px bg-accent inline-block" />
-            Disponível para novos desafios
-          </p>
-
-          <h1 className="font-display italic font-bold leading-[0.95] tracking-tight mb-2 text-foreground">
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem]">Yuri</span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem]">Dorigon</span>
+          <h1 className="font-display italic font-bold leading-[0.95] tracking-tight mb-2 pb-3">
+            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] text-gradient">Yuri</span>
+            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] text-gradient">Dorigon</span>
           </h1>
 
           <div className="flex items-center gap-4 justify-center lg:justify-start my-6">
@@ -45,43 +42,47 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-12">
-            <Button asChild className="gap-2 font-bold uppercase tracking-widest text-[9px] md:text-[10px] h-11 px-6 bg-foreground text-background hover:bg-accent hover:text-accent-foreground">
+            <Button asChild className="gap-2 font-bold uppercase tracking-widest text-[9px] md:text-[10px] h-11 px-6 bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-300 shadow-[0_8px_30px_-8px_hsla(188,95%,52%,0.6)] hover:shadow-[0_8px_40px_-6px_hsla(188,95%,52%,0.8)]">
               <a href="https://linkedin.com/in/yuridorigon" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-3.5 h-3.5" /> LinkedIn
               </a>
             </Button>
-            <Button variant="outline" asChild className="gap-2 font-bold uppercase tracking-widest text-[9px] md:text-[10px] h-11 px-6 border-foreground/30 hover:border-accent hover:text-accent">
+            <Button variant="outline" asChild className="gap-2 font-bold uppercase tracking-widest text-[9px] md:text-[10px] h-11 px-6 border-accent/30 bg-transparent text-foreground hover:border-accent hover:text-accent hover:bg-accent/10 transition-all duration-300">
               <a href="https://github.com/yuridorigon" target="_blank" rel="noopener noreferrer">
                 <Github className="w-3.5 h-3.5" /> GitHub
               </a>
             </Button>
-            <Button variant="ghost" asChild className="gap-2 font-bold uppercase tracking-widest text-[9px] md:text-[10px] h-11 px-6 hover:text-accent">
-              <a href="mailto:yuridorigon12@gmail.com?subject=Contato via Portfólio">
-                <Mail className="w-3.5 h-3.5" /> Contato
-              </a>
+            <Button variant="ghost" className="gap-2 font-bold uppercase tracking-widest text-[9px] md:text-[10px] h-11 px-6 text-muted-foreground hover:text-accent hover:bg-accent/10 transition-all duration-300 cursor-pointer" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Mail className="w-3.5 h-3.5" /> Contato
             </Button>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 text-center lg:text-left border-t border-border/50 pt-8 max-w-xs mx-auto lg:mx-0">
+          <div className="grid grid-cols-3 gap-6 text-center lg:text-left border-t border-border/50 pt-8 max-w-sm mx-auto lg:mx-0">
             <div>
               <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Especialidade</span>
               <span className="text-sm font-bold uppercase tracking-tight">React & Next.js</span>
             </div>
             <div>
-              <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Atuação Atual</span>
+              <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Atuação</span>
               <span className="text-sm font-bold uppercase tracking-tight">Dev Full-Stack</span>
+            </div>
+            <div>
+              <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Cargo Tagis</span>
+              <span className="text-sm font-bold uppercase tracking-tight">Assist. Direção</span>
             </div>
           </div>
         </div>
 
         {/* Photo */}
         <div className="relative animate-fade-in [animation-delay:350ms] opacity-0 shrink-0">
-          <div className="relative w-52 h-52 sm:w-72 sm:h-72 lg:w-[380px] lg:h-[380px]">
-            {/* Decorative offset frame */}
-            <div className="absolute -inset-3 border border-border/60 rounded-none" />
-            <div className="absolute -inset-6 border border-border/30 rounded-none hidden lg:block" />
+          <div className="relative w-52 h-52 sm:w-72 sm:h-72 lg:w-[380px] lg:h-[380px] animate-float">
+            {/* Soft cyan glow halo */}
+            <div className="absolute -inset-8 rounded-[2rem] bg-accent/20 blur-3xl" />
+            {/* Decorative offset frames */}
+            <div className="absolute -inset-3 border border-accent/30 rounded-3xl" />
+            <div className="absolute -inset-6 border border-border/40 rounded-[1.75rem] hidden lg:block" />
 
-            <div className="relative w-full h-full overflow-hidden rounded-none">
+            <div className="relative w-full h-full overflow-hidden rounded-3xl border border-accent/20 shadow-[0_20px_60px_-20px_hsla(188,95%,52%,0.5)]">
               {profileImg ? (
                 <Image
                   src={profileImg}

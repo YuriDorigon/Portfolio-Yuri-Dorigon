@@ -14,7 +14,7 @@ function SkillRow({ name, level }: { name: string; level: number }) {
           {Array.from({ length: 5 }).map((_, i) => (
             <div
               key={i}
-              className={`w-5 h-0.5 transition-colors ${i < level ? "bg-accent" : "bg-border"}`}
+              className={`w-5 h-0.5 rounded-full transition-colors ${i < level ? "bg-accent shadow-[0_0_8px_hsla(188,95%,52%,0.6)]" : "bg-border"}`}
             />
           ))}
         </div>
@@ -65,10 +65,11 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 md:py-28 bg-secondary">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="skills" className="relative py-20 md:py-28 bg-secondary overflow-hidden">
+      <div className="absolute bottom-0 right-1/4 w-[36rem] h-[36rem] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="relative container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-14 md:mb-20 gap-4 border-b border-border pb-8">
-          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-foreground">
+          <h2 className="font-display italic font-bold text-4xl md:text-6xl lg:text-7xl tracking-tight text-gradient">
             Tecnologias
           </h2>
           <p className="text-muted-foreground uppercase tracking-[0.2em] text-[9px] md:text-[10px] font-bold">
