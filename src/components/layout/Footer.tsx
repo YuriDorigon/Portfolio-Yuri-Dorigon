@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             <span className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/60">
-              Disponível para novos projetos
+              Aberto a conversar sobre projetos
             </span>
           </div>
           <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground/40 hidden sm:block">
