@@ -17,8 +17,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Yuri Dorigon | Desenvolvedor Front-End',
-  description: 'Portfólio de Yuri Dorigon, desenvolvedor Front-End especializado em React, HTML, CSS e Next.js.',
+  title: 'Yuri Dorigon | Desenvolvedor Full-Stack',
+  description: 'Portfólio de Yuri Dorigon, desenvolvedor Full-Stack especializado em React, Next.js, Node.js e integrações com IA.',
   icons: {
     icon: '/vector.svg',
   },
@@ -28,13 +28,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Yuri Dorigon',
-  jobTitle: 'Desenvolvedor Front-End',
+  jobTitle: 'Desenvolvedor Full-Stack',
   url: 'https://yuridorigon.com.br',
   sameAs: [
     'https://linkedin.com/in/yuridorigon',
     'https://github.com/yuridorigon'
   ],
-  description: 'Desenvolvedor Front-End especializado em React, Next.js e tecnologias web modernas.'
+  description: 'Desenvolvedor Full-Stack especializado em React, Next.js, Node.js e integrações com IA.'
 };
 
 export default function RootLayout({

@@ -55,7 +55,7 @@ export default function Skills() {
     {
       title: "IA & Automação",
       skills: [
-        { name: "Claude AI (Vibe Coding)", level: 5 },
+        { name: "Claude AI", level: 5 },
         { name: "Google Gemini / Genkit", level: 4 },
         { name: "Meta WhatsApp API", level: 4 },
         { name: "Electron", level: 3 },
@@ -97,9 +97,6 @@ export default function Skills() {
           <div className="mt-16 md:mt-20 border-l-2 border-accent pl-8 space-y-4">
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground italic font-display">
               "Construo sistemas completos — do banco de dados ao frontend — que resolvem problemas reais e rodam em produção todo dia."
-            </p>
-            <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
-              Especialista em vibe coding com Claude AI: desenvolvo com velocidade e qualidade de produção, entregando integrações complexas (WhatsApp, IA, ERPs) sem abrir mão de código limpo e bem estruturado.
             </p>
           </div>
         </div>

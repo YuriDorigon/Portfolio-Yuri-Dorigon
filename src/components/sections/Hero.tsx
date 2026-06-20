@@ -86,7 +86,7 @@ export default function Hero() {
               {profileImg ? (
                 <Image
                   src={profileImg}
-                  alt="Yuri Dorigon — Desenvolvedor Front-End"
+                  alt="Yuri Dorigon — Desenvolvedor Full-Stack"
                   fill
                   className="object-cover"
                   priority

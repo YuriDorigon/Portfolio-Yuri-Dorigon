@@ -59,7 +59,7 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           <div className="space-y-10">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Estou aberto a novas oportunidades e interessado em colaborar com equipes que buscam criar produtos digitais modernos.
+              Aberto a conversar sobre projetos interessantes e colaborações com equipes que buscam criar produtos digitais modernos.
             </p>
 
             <div className="space-y-1">
@@ -89,7 +89,7 @@ export default function Contact() {
               </p>
               <p className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shrink-0" />
-                Disponível para novos projetos e oportunidades.
+                Aberto a conversar sobre projetos.
               </p>
             </div>
           </div>

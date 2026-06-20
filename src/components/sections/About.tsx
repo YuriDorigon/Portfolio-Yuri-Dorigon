@@ -34,7 +34,7 @@ export default function About() {
                 Construo desde sites institucionais e dashboards React até bots de automação em Node.js, integração com APIs de WhatsApp Business (Meta), OCR com Google Gemini Vision e geração de escalas com IA.
               </p>
               <p>
-                Especialista em vibe coding com Claude — desenvolvo soluções completas de forma acelerada, entregando código de produção com alta qualidade e velocidade.
+                Uso IA como ferramenta de aceleração no desenvolvimento — o que me permite entregar integrações complexas com velocidade sem abrir mão de código limpo e bem estruturado.
               </p>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function About() {
                     Diferencial
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Especialista em vibe coding com Claude AI — entrego sistemas completos, do banco de dados ao frontend, com velocidade e qualidade de produção. Todos os projetos do portfólio estão ativos e em uso real.
+                    Entrego sistemas completos — do banco de dados ao frontend — com velocidade e qualidade de produção. Todos os projetos do portfólio estão ativos e em uso real.
                   </p>
                 </div>
               </div>
