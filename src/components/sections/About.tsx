@@ -34,7 +34,7 @@ export default function About() {
                 Construo desde sites institucionais e dashboards React até bots de automação em Node.js, integração com APIs de WhatsApp Business (Meta), OCR com Google Gemini Vision e geração de escalas com IA.
               </p>
               <p>
-                Uso IA como ferramenta de aceleração no desenvolvimento — o que me permite entregar integrações complexas com velocidade sem abrir mão de código limpo e bem estruturado.
+                Uso IA no dia a dia pra ir mais rápido — mas o que importa é o resultado: sistemas que a equipe usa todo dia sem quebrar.
               </p>
             </div>
           </div>

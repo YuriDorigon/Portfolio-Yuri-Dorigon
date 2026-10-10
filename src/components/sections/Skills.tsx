@@ -35,7 +35,7 @@ export default function Skills() {
         { name: "JavaScript", level: 5 },
         { name: "React", level: 4 },
         { name: "Next.js", level: 4 },
-        { name: "TypeScript", level: 3 },
+        { name: "TypeScript", level: 4 },
         { name: "Tailwind CSS", level: 5 },
         { name: "ShadCN UI", level: 4 },
       ]
@@ -55,7 +55,7 @@ export default function Skills() {
     {
       title: "IA & Automação",
       skills: [
-        { name: "Claude AI", level: 5 },
+        { name: "IA no desenvolvimento", level: 4 },
         { name: "Google Gemini / Genkit", level: 4 },
         { name: "Meta WhatsApp API", level: 4 },
         { name: "Electron", level: 3 },

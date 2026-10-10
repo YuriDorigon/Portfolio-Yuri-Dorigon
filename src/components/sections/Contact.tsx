@@ -59,7 +59,7 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           <div className="space-y-10">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Aberto a conversar sobre projetos interessantes e colaborações com equipes que buscam criar produtos digitais modernos.
+              Aberto a conversar sobre oportunidades e projetos — especialmente com times que precisam de sistemas que funcionam de verdade.
             </p>
 
             <div className="space-y-1">
@@ -122,7 +122,7 @@ export default function Contact() {
                       <FormLabel className="uppercase text-[9px] tracking-widest font-bold">Mensagem</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Como posso agregar valor ao seu time?"
+                          placeholder="Conta pra mim o que você precisa"
                           className="bg-transparent border-0 border-b border-border rounded-none focus-visible:ring-0 focus-visible:border-accent min-h-[120px] px-0 resize-none text-sm py-3"
                           {...field}
                         />

@@ -57,7 +57,7 @@ export default function Hero() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-3 gap-6 text-center lg:text-left border-t border-border/50 pt-8 max-w-sm mx-auto lg:mx-0">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center lg:text-left border-t border-border/50 pt-8 max-w-sm mx-auto lg:mx-0">
             <div>
               <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Especialidade</span>
               <span className="text-sm font-bold uppercase tracking-tight">React & Next.js</span>
