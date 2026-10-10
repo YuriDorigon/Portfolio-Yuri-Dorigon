@@ -28,7 +28,7 @@ export default function About() {
             </p>
             <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
               <p>
-                Trabalho na Tagis Medicina & Diagnóstico onde, além do suporte de TI, sou o responsável por desenvolver e manter todos os sistemas internos da clínica — 7+ aplicações em produção usadas diariamente pela equipe.
+                Trabalho na Tagis Medicina & Diagnóstico onde, além do suporte de TI, sou o responsável por desenvolver e manter todos os sistemas internos da clínica — 8+ aplicações em produção usadas diariamente pela equipe.
               </p>
               <p>
                 Construo desde sites institucionais e dashboards React até bots de automação em Node.js, integração com APIs de WhatsApp Business (Meta), OCR com Google Gemini Vision e geração de escalas com IA.
@@ -47,12 +47,12 @@ export default function About() {
                 Experiência Profissional
               </h4>
               <div className="border-l-2 border-accent/40 pl-6 space-y-3">
-                <p className="font-bold text-foreground text-lg leading-tight">Assistente de Direção & Desenvolvedor de Sistemas</p>
+                <p className="font-bold text-foreground text-lg leading-tight">Desenvolvedor Full-Stack</p>
                 <p className="text-sm font-bold text-accent">Tagis Medicina & Diagnóstico</p>
                 <p className="text-[9px] text-muted-foreground uppercase tracking-widest font-bold">2023 — Presente</p>
                 <ul className="mt-4 space-y-2.5">
                   {[
-                    "Desenvolvimento e manutenção de 7+ sistemas internos em produção",
+                    "Desenvolvimento e manutenção de 8+ sistemas internos em produção",
                     "Bot de confirmação de agendamentos via WhatsApp com Meta Business API, templates aprovados e integração NetRIS",
                     "Sistema de orçamentos laboratoriais com OCR por IA (Google Gemini Vision) para leitura de pedidos médicos",
                     "Emissão automática de notas fiscais via app Electron com scraping e API REST",

@@ -67,8 +67,8 @@ export default function Hero() {
               <span className="text-sm font-bold uppercase tracking-tight">Dev Full-Stack</span>
             </div>
             <div>
-              <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Cargo Tagis</span>
-              <span className="text-sm font-bold uppercase tracking-tight">Assist. Direção</span>
+              <span className="text-muted-foreground text-[9px] uppercase font-bold tracking-widest block mb-1">Na Tagis</span>
+              <span className="text-sm font-bold uppercase tracking-tight">Desenvolvedor</span>
             </div>
           </div>
         </div>
